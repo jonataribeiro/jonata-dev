@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import avatar from "@/assets/avatar.jpg";
 
 export const Hero = () => {
   return (
@@ -115,7 +116,7 @@ export const Hero = () => {
             <div className="absolute -inset-4 bg-primary/20 rounded-full blur-3xl" />
             <div className="relative w-56 h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-primary/40 shadow-elegant">
               <img
-                src="/src/assets/avatar.jpg"
+                src={avatar}
                 alt="Jônata Ribeiro"
                 width={768}
                 height={768}
