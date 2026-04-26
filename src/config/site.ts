@@ -154,4 +154,4 @@ export const projects: readonly Project[] = [
     github: "#",
     live: "#",
   },
-] as const;
+];
