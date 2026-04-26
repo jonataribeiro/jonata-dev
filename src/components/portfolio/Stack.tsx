@@ -3,7 +3,7 @@ import { stack } from "@/config/site";
 
 export const Stack = () => {
   return (
-    <section id="stack" className="py-24 sm:py-32 relative bg-muted/20">
+    <section id="stack" className="py-24 sm:py-32 relative">
       <div className="container max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
