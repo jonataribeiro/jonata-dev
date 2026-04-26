@@ -1,37 +1,10 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-
-const projects = [
-  {
-    title: "Dashboard Analytics",
-    description:
-      "Painel de métricas em tempo real com gráficos interativos, filtros avançados e tema escuro. Construído com foco em performance.",
-    tags: ["React", "TypeScript", "Recharts", "Tailwind"],
-    featured: true,
-  },
-  {
-    title: "API de Tarefas",
-    description:
-      "REST API com autenticação JWT, validação, testes automatizados e documentação Swagger.",
-    tags: ["Node.js", "Express", "PostgreSQL", "JWT"],
-  },
-  {
-    title: "E-commerce SPA",
-    description:
-      "Loja virtual com carrinho persistente, checkout simulado e integração com API de produtos.",
-    tags: ["React", "Context API", "Stripe", "Vite"],
-  },
-  {
-    title: "Landing Pages",
-    description:
-      "Coleção de landing pages responsivas e animadas para portfolios, SaaS e produtos digitais.",
-    tags: ["HTML", "CSS", "Framer Motion"],
-  },
-];
+import { projects } from "@/config/site";
 
 export const Projects = () => {
   return (
-    <section id="projetos" className="py-32 relative">
+    <section id="projetos" className="py-24 sm:py-32 relative bg-muted/20">
       <div className="container max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,8 +14,8 @@ export const Projects = () => {
           className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4"
         >
           <div>
-            <p className="font-mono text-sm text-primary mb-3">/ 03 — projetos</p>
-            <h2 className="font-display font-bold text-4xl lg:text-5xl tracking-tight">
+            <p className="font-mono text-sm text-primary mb-3">/ 04 — projetos</p>
+            <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
               Coisas que <span className="text-gradient">construí</span>.
             </h2>
           </div>
@@ -59,7 +32,7 @@ export const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className={`group relative bg-card-gradient border border-border rounded-2xl p-7 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 ${
+              className={`group relative bg-card-gradient border border-border rounded-2xl p-7 hover:border-primary/40 hover:-translate-y-1 hover:shadow-glow-sm transition-all duration-300 ${
                 p.featured ? "md:col-span-2" : ""
               }`}
             >
@@ -91,20 +64,30 @@ export const Projects = () => {
               </div>
 
               <div className="flex items-center gap-4">
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
-                >
-                  <Github className="w-4 h-4" />
-                  Código
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Ver online
-                </a>
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                    aria-label={`Ver código de ${p.title} no GitHub`}
+                  >
+                    <Github className="w-4 h-4" />
+                    Código
+                  </a>
+                )}
+                {p.live && (
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                    aria-label={`Ver ${p.title} online`}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Ver online
+                  </a>
+                )}
               </div>
             </motion.article>
           ))}

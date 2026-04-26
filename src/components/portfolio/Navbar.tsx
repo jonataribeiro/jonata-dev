@@ -1,21 +1,28 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, FileDown } from "lucide-react";
+import { site } from "@/config/site";
 
 const links = [
   { href: "#sobre", label: "Sobre" },
   { href: "#stack", label: "Stack" },
+  { href: "#trajetoria", label: "Trajetória" },
   { href: "#projetos", label: "Projetos" },
   { href: "#contato", label: "Contato" },
 ];
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Fecha menu ao clicar em link
+  const handleNavClick = () => setOpen(false);
 
   return (
     <motion.header
@@ -29,11 +36,16 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container flex items-center justify-between py-4">
-        <a href="#top" className="font-display font-bold text-lg tracking-tight">
+        <a
+          href="#top"
+          className="font-display font-bold text-lg tracking-tight"
+          aria-label={`Ir para o topo — ${site.domain}`}
+        >
           <span className="text-foreground">jonataribeiro</span>
           <span className="text-primary">.dev</span>
         </a>
 
+        {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
           {links.map((l) => (
             <li key={l.href}>
@@ -47,13 +59,79 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <a
-          href="#contato"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:shadow-glow transition-all"
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href={site.resumeUrl}
+            download
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-all"
+          >
+            <FileDown className="w-4 h-4" />
+            Currículo
+          </a>
+          <a
+            href="#contato"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:shadow-glow-sm transition-all"
+          >
+            Vamos conversar
+          </a>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
         >
-          Vamos conversar
-        </a>
+          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
       </nav>
+
+      {/* Mobile drawer */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25 }}
+            className="md:hidden overflow-hidden border-t border-border bg-background/95 backdrop-blur-xl"
+          >
+            <ul className="container py-6 flex flex-col gap-1">
+              {links.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    onClick={handleNavClick}
+                    className="block px-3 py-3 rounded-lg text-base font-medium text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+              <li className="grid grid-cols-2 gap-3 mt-4">
+                <a
+                  href={site.resumeUrl}
+                  download
+                  onClick={handleNavClick}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-all"
+                >
+                  <FileDown className="w-4 h-4" />
+                  Currículo
+                </a>
+                <a
+                  href="#contato"
+                  onClick={handleNavClick}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
+                >
+                  Conversar
+                </a>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
