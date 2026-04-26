@@ -111,7 +111,16 @@ export const timeline = [
 ] as const;
 
 /** Projetos em destaque */
-export const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tags: readonly string[];
+  github?: string;
+  live?: string;
+  featured?: boolean;
+};
+
+export const projects: readonly Project[] = [
   {
     title: "Dashboard Analytics",
     description:
