@@ -178,4 +178,38 @@
       linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
       var(--gradient-border) border-box;
   }
+
+  /* ─── Background ambiente: aurora violeta animada ─── */
+  .bg-aurora {
+    background: var(--gradient-aurora);
+    filter: blur(80px);
+    animation: aurora-spin 22s linear infinite;
+  }
+
+  /* Orbs de luz violeta espalhados */
+  .bg-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    pointer-events: none;
+    opacity: 0.55;
+  }
+  .bg-orb-primary { background: hsl(268 92% 55% / 0.55); }
+  .bg-orb-accent  { background: hsl(285 95% 65% / 0.45); }
+  .bg-orb-deep    { background: hsl(245 88% 55% / 0.45); }
+
+  /* Noise sutil para textura cinematográfica */
+  .bg-noise::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.9'/></svg>");
+  }
+
+  @keyframes aurora-spin {
+    to { transform: rotate(360deg); }
+  }
 }
