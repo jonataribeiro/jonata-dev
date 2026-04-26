@@ -1,0 +1,5 @@
+Substitua este arquivo por seu currículo em PDF, com o nome "curriculo.pdf".
+
+Caminho: public/curriculo.pdf
+
+Depois de salvar, o botão "Baixar Currículo" no site fará o download automaticamente.

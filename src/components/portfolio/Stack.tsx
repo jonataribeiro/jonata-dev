@@ -1,27 +1,9 @@
 import { motion } from "framer-motion";
-
-const groups = [
-  {
-    title: "Frontend",
-    items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vite", "HTML5", "CSS3"],
-  },
-  {
-    title: "Backend & Dados",
-    items: ["Node.js", "Express", "REST APIs", "PostgreSQL", "Supabase"],
-  },
-  {
-    title: "Ferramentas",
-    items: ["Git", "GitHub", "Figma", "VS Code", "Vercel", "Postman"],
-  },
-  {
-    title: "Estudando agora",
-    items: ["Testes (Vitest)", "Docker", "Arquitetura limpa", "Inglês técnico"],
-  },
-];
+import { stack } from "@/config/site";
 
 export const Stack = () => {
   return (
-    <section id="stack" className="py-32 relative bg-muted/20">
+    <section id="stack" className="py-24 sm:py-32 relative bg-muted/20">
       <div className="container max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,13 +13,13 @@ export const Stack = () => {
           className="mb-16"
         >
           <p className="font-mono text-sm text-primary mb-3">/ 02 — stack</p>
-          <h2 className="font-display font-bold text-4xl lg:text-5xl tracking-tight">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
             Tecnologias que <span className="text-gradient">domino</span> e que estudo.
           </h2>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {groups.map((g, i) => (
+          {stack.map((g, i) => (
             <motion.div
               key={g.title}
               initial={{ opacity: 0, y: 20 }}
