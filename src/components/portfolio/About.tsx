@@ -5,18 +5,18 @@ import { about } from "@/config/site";
 const pillars = [
   {
     icon: Code2,
-    title: "Código limpo",
-    text: "Componentes bem estruturados, tipados e fáceis de manter.",
+    title: "Disciplina técnica",
+    text: "Código tipado, modular e mobile-first. Não escrevo para rodar — escrevo para durar.",
   },
   {
     icon: Lightbulb,
-    title: "Aprendizado contínuo",
-    text: "Estudo diário, projetos práticos e curiosidade que não para.",
+    title: "Visão analítica",
+    text: "Anos lidando com fluxos operacionais críticos. Depuro sistemas com a mesma clareza.",
   },
   {
     icon: Rocket,
-    title: "Foco em entrega",
-    text: "Da ideia ao deploy: produtos funcionais que resolvem problemas.",
+    title: "Foco em resultado",
+    text: "Resiliência sob pressão e entrega de produto. Técnica a serviço da utilidade real.",
   },
 ];
 
@@ -33,8 +33,8 @@ export const About = () => {
         >
           <p className="font-mono text-sm text-primary mb-3">/ 01 — sobre mim</p>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight max-w-3xl">
-            Transformando linhas de código em{" "}
-            <span className="text-gradient">soluções reais</span>.
+            Transição estratégica para o{" "}
+            <span className="text-gradient">desenvolvimento de software</span>.
           </h2>
         </motion.div>
 

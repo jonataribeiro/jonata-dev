@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,76 +6,77 @@
 
 /* ===========================================================
    Design System — Jônata Ribeiro Portfolio
-   Tema: Dark minimalista, acento Roxo Neon.
+   Estilo: Modern Minimalist
+   Paleta: Azul marinho (navy) + Cinza espacial + Off-white
    IMPORTANTE: Todas as cores em HSL. Não use cores hardcoded
    nos componentes — sempre use os tokens semânticos abaixo.
    =========================================================== */
 
 @layer base {
   :root {
-    /* ─────────── Base — fundo violeta profundo ─────────── */
-    --background: 265 40% 4%;
-    --foreground: 270 20% 96%;
+    /* ─────────── Base — azul marinho profundo + off-white ─────────── */
+    --background: 220 35% 6%;              /* navy quase preto */
+    --foreground: 40 25% 96%;              /* off-white */
 
-    --card: 265 35% 7%;
-    --card-foreground: 270 20% 96%;
+    --card: 220 30% 9%;                    /* cinza espacial */
+    --card-foreground: 40 25% 96%;
 
-    --popover: 265 35% 7%;
-    --popover-foreground: 270 20% 96%;
+    --popover: 220 30% 9%;
+    --popover-foreground: 40 25% 96%;
 
-    /* ─────────── Violeta vivo — cor principal ─────────── */
-    --primary: 268 92% 62%;
-    --primary-foreground: 265 40% 5%;
-    --primary-glow: 282 100% 72%;
-    --primary-deep: 258 88% 48%;
+    /* ─────────── Acento — azul marinho vivo (sóbrio) ─────────── */
+    --primary: 215 88% 62%;                /* navy/blue principal */
+    --primary-foreground: 220 35% 6%;
+    --primary-glow: 210 95% 72%;           /* glow azul claro */
+    --primary-deep: 220 80% 42%;           /* navy profundo */
 
-    --secondary: 265 30% 13%;
-    --secondary-foreground: 270 20% 96%;
+    --secondary: 220 25% 14%;              /* cinza espacial mais claro */
+    --secondary-foreground: 40 25% 96%;
 
-    --muted: 265 28% 10%;
-    --muted-foreground: 268 12% 65%;
+    --muted: 220 22% 12%;
+    --muted-foreground: 220 12% 65%;       /* cinza neutro */
 
-    --accent: 285 95% 68%;
-    --accent-foreground: 265 40% 5%;
+    --accent: 200 90% 60%;                 /* azul ciano sutil */
+    --accent-foreground: 220 35% 6%;
 
-    --destructive: 0 75% 60%;
-    --destructive-foreground: 270 20% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 40 25% 98%;
 
-    --border: 268 25% 16%;
-    --input: 268 25% 16%;
-    --ring: 268 92% 62%;
+    --border: 220 22% 16%;
+    --input: 220 22% 16%;
+    --ring: 215 88% 62%;
 
     --radius: 0.875rem;
 
-    /* WhatsApp brand */
-    --whatsapp: 142 70% 49%;
+    /* WhatsApp brand (mantido isolado) */
+    --whatsapp: 142 70% 45%;
     --whatsapp-foreground: 0 0% 100%;
 
-    /* ─────────── Gradientes ─────────── */
-    --gradient-hero: radial-gradient(ellipse 90% 60% at 50% 0%, hsl(268 92% 62% / 0.28), transparent 70%);
-    --gradient-text: linear-gradient(135deg, hsl(270 20% 99%) 0%, hsl(275 95% 78%) 45%, hsl(290 100% 78%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(265 35% 9%), hsl(265 38% 6%));
-    --gradient-border: linear-gradient(135deg, hsl(268 92% 62% / 0.6), hsl(268 25% 16%));
-    --gradient-primary: linear-gradient(135deg, hsl(258 88% 55%), hsl(285 95% 68%));
-    --gradient-aurora: conic-gradient(from 180deg at 50% 50%, hsl(268 92% 62% / 0.18), hsl(290 100% 70% / 0.14), hsl(245 90% 55% / 0.18), hsl(268 92% 62% / 0.18));
+    /* ─────────── Gradientes — discretos e elegantes ─────────── */
+    --gradient-hero: radial-gradient(ellipse 80% 55% at 50% 0%, hsl(215 88% 55% / 0.18), transparent 70%);
+    --gradient-text: linear-gradient(135deg, hsl(40 25% 99%) 0%, hsl(210 90% 82%) 55%, hsl(215 88% 70%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 30% 11%), hsl(220 32% 7%));
+    --gradient-border: linear-gradient(135deg, hsl(215 88% 62% / 0.45), hsl(220 22% 16%));
+    --gradient-primary: linear-gradient(135deg, hsl(220 80% 48%), hsl(210 95% 65%));
+    --gradient-aurora: conic-gradient(from 180deg at 50% 50%, hsl(215 88% 55% / 0.10), hsl(200 90% 60% / 0.08), hsl(220 80% 45% / 0.10), hsl(215 88% 55% / 0.10));
 
-    /* ─────────── Sombras com glow violeta ─────────── */
-    --shadow-glow: 0 0 80px hsl(268 92% 62% / 0.45);
-    --shadow-glow-sm: 0 0 28px hsl(268 92% 62% / 0.35);
-    --shadow-card: 0 8px 32px -8px hsl(265 60% 2% / 0.8);
-    --shadow-elegant: 0 24px 70px -20px hsl(268 92% 50% / 0.55);
+    /* ─────────── Sombras — profissionais, sem neon excessivo ─────────── */
+    --shadow-glow: 0 0 60px hsl(215 88% 55% / 0.30);
+    --shadow-glow-sm: 0 0 24px hsl(215 88% 55% / 0.25);
+    --shadow-card: 0 8px 32px -8px hsl(220 50% 2% / 0.85);
+    --shadow-elegant: 0 24px 60px -22px hsl(215 88% 40% / 0.40);
 
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Sidebar */
-    --sidebar-background: 265 40% 4%;
-    --sidebar-foreground: 270 20% 96%;
-    --sidebar-primary: 268 92% 62%;
-    --sidebar-primary-foreground: 265 40% 5%;
-    --sidebar-accent: 265 30% 13%;
-    --sidebar-accent-foreground: 270 20% 96%;
-    --sidebar-border: 268 25% 16%;
-    --sidebar-ring: 268 92% 62%;
+    --sidebar-background: 220 35% 6%;
+    --sidebar-foreground: 40 25% 96%;
+    --sidebar-primary: 215 88% 62%;
+    --sidebar-primary-foreground: 220 35% 6%;
+    --sidebar-accent: 220 25% 14%;
+    --sidebar-accent-foreground: 40 25% 96%;
+    --sidebar-border: 220 22% 16%;
+    --sidebar-ring: 215 88% 62%;
   }
 }
 
@@ -91,15 +92,16 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-feature-settings: "ss01", "cv11";
+    /* Background ambiente sóbrio: dois leves halos navy */
     background-image:
-      radial-gradient(ellipse 50% 40% at 15% 10%, hsl(268 92% 50% / 0.10), transparent 60%),
-      radial-gradient(ellipse 45% 35% at 85% 20%, hsl(285 95% 60% / 0.08), transparent 60%),
-      radial-gradient(ellipse 60% 40% at 50% 100%, hsl(258 88% 50% / 0.10), transparent 60%);
+      radial-gradient(ellipse 55% 40% at 15% 8%,  hsl(215 88% 50% / 0.08), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 85% 18%, hsl(200 90% 55% / 0.06), transparent 60%),
+      radial-gradient(ellipse 65% 45% at 50% 100%, hsl(220 80% 45% / 0.07), transparent 60%);
     background-attachment: fixed;
   }
 
   ::selection {
-    background: hsl(var(--primary) / 0.4);
+    background: hsl(var(--primary) / 0.35);
     color: hsl(var(--foreground));
   }
 
@@ -122,7 +124,9 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Space Grotesk', sans-serif;
+    /* Display continua Space Grotesk (sans-serif moderna). 
+       Para trocar para Geist, importe-a no @import acima e altere aqui. */
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
   }
 
   .font-mono {
@@ -179,24 +183,32 @@
       var(--gradient-border) border-box;
   }
 
-  /* ─── Background ambiente: aurora violeta animada ─── */
+  /* ─── Glassmorphism sutil para cards de stack/filosofia ─── */
+  .glass {
+    background: hsl(var(--card) / 0.55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* ─── Background ambiente: aurora azul (mais discreta) ─── */
   .bg-aurora {
     background: var(--gradient-aurora);
     filter: blur(80px);
-    animation: aurora-spin 22s linear infinite;
+    animation: aurora-spin 28s linear infinite;
   }
 
-  /* Orbs de luz violeta espalhados */
+  /* Orbs de luz navy/azul espalhados (suaves) */
   .bg-orb {
     position: absolute;
     border-radius: 9999px;
-    filter: blur(90px);
+    filter: blur(100px);
     pointer-events: none;
-    opacity: 0.55;
+    opacity: 0.45;
   }
-  .bg-orb-primary { background: hsl(268 92% 55% / 0.55); }
-  .bg-orb-accent  { background: hsl(285 95% 65% / 0.45); }
-  .bg-orb-deep    { background: hsl(245 88% 55% / 0.45); }
+  .bg-orb-primary { background: hsl(215 88% 50% / 0.45); }
+  .bg-orb-accent  { background: hsl(200 90% 55% / 0.35); }
+  .bg-orb-deep    { background: hsl(220 80% 40% / 0.40); }
 
   /* Noise sutil para textura cinematográfica */
   .bg-noise::before {
@@ -204,7 +216,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.035;
+    opacity: 0.025;
     mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.9'/></svg>");
   }

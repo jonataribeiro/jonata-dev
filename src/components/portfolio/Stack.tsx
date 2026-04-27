@@ -14,7 +14,7 @@ export const Stack = () => {
         >
           <p className="font-mono text-sm text-primary mb-3">/ 02 — stack</p>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
-            Tecnologias que <span className="text-gradient">domino</span> e que estudo.
+            Stack <span className="text-gradient">técnica</span> em construção.
           </h2>
         </motion.div>
 
@@ -26,7 +26,7 @@ export const Stack = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-card-gradient border border-border rounded-2xl p-6 hover:border-primary/40 transition-colors"
+              className="glass rounded-2xl p-6 hover:border-primary/40 transition-colors"
             >
               <h3 className="font-display font-semibold text-lg mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
