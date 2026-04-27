@@ -4,6 +4,7 @@ import { About } from "@/components/portfolio/About";
 import { Stack } from "@/components/portfolio/Stack";
 import { Timeline } from "@/components/portfolio/Timeline";
 import { Projects } from "@/components/portfolio/Projects";
+import { Philosophy } from "@/components/portfolio/Philosophy";
 import { Contact, Footer } from "@/components/portfolio/Contact";
 import { WhatsAppFab } from "@/components/portfolio/WhatsAppFab";
 
@@ -39,6 +40,7 @@ const Index = () => {
       <Stack />
       <Timeline />
       <Projects />
+      <Philosophy />
       <Contact />
       <Footer />
       <WhatsAppFab />

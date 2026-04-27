@@ -1,13 +1,13 @@
 # Project Memory
 
 ## Core
-Portfolio Jônata Ribeiro. Dark minimalista, acento ROXO NEON (primary 270 95% 65%, glow 280 100% 75%).
-Space Grotesk display, Inter body, JetBrains Mono para acentos.
-Domínio: jonataribeiro.dev. Email: contato@jonataribeiro.dev.
+Portfolio Jônata Ribeiro. Modern Minimalist. Paleta: navy (215 88% 62%) + cinza espacial + off-white.
+Space Grotesk display, Inter body, JetBrains Mono acento. Tom maduro, pragmático, profissional.
+Diferencial: experiência operacional no serviço público como base analítica para dev.
 Conteúdo centralizado em src/config/site.ts (edição fácil pelo VS Code).
-Profissional, elegante, vitrine para conquistar primeira vaga em tecnologia.
+Domínio: jonataribeiro.dev. WhatsApp: 5511974726780.
 
 ## Memories
-- [Design System](mem://design/system) — Paleta roxo neon HSL, tokens, gradientes, sombras com glow
-- [Identidade](mem://user/identity) — Nome, domínio, contato, objetivos profissionais
-- [Estilo Visual](mem://design/style) — Direção estética: minimalismo tech, animações sutis
+- [Design System](mem://design/system) — Paleta navy HSL, glass, gradientes sóbrios
+- [Identidade](mem://user/identity) — Nome, domínio, contato, objetivo profissional
+- [Estilo Visual](mem://design/style) — Modern Minimalist, mobile-first, Clean Code

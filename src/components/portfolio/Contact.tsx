@@ -19,12 +19,12 @@ export const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <p className="font-mono text-sm text-primary mb-3">/ 05 — contato</p>
+          <p className="font-mono text-sm text-primary mb-3">/ 06 — contato</p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-tight mb-6">
-            Vamos construir <span className="text-gradient">algo juntos</span>?
+            Onde a técnica <span className="text-gradient">encontra a oportunidade</span>.
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto mb-12">
-            Estou em busca da minha primeira oportunidade no mercado de tecnologia.
+            Em busca da primeira oportunidade no mercado de tecnologia.
             Se meu perfil combina com o que você procura, vamos conversar.
           </p>
 

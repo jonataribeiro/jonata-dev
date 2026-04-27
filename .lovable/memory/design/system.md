@@ -1,43 +1,41 @@
 ---
 name: Design System
-description: Paleta HSL roxo neon, tokens semânticos, gradientes e sombras com glow
+description: Paleta navy + cinza espacial + off-white, Modern Minimalist sóbrio
 type: design
 ---
-# Design System — Roxo Neon
+# Design System — Modern Minimalist (Navy)
 
-Tema dark minimalista com acento roxo neon (atualizado de mint).
+Tema dark profissional, sóbrio. Atualizado de roxo neon → azul marinho.
 
 ## Paleta (HSL)
-- background: 250 30% 5%
-- foreground: 250 15% 94%
-- card: 250 25% 8%
-- primary: 270 95% 65% (roxo neon principal)
-- primary-glow: 280 100% 75%
-- border: 250 20% 14%
-- muted-foreground: 250 10% 60%
-- whatsapp: 142 70% 49% (cor da marca, semântica isolada)
+- background: 220 35% 6% (navy quase preto)
+- foreground: 40 25% 96% (off-white)
+- card: 220 30% 9% (cinza espacial)
+- primary: 215 88% 62% (navy/blue principal)
+- primary-glow: 210 95% 72%
+- primary-deep: 220 80% 42%
+- accent: 200 90% 60% (azul ciano sutil)
+- border: 220 22% 16%
+- muted-foreground: 220 12% 65%
+- whatsapp: 142 70% 45% (mantida isolada)
 
 ## Tipografia
-- Display: Space Grotesk (headings)
-- Body: Inter (texto)
-- Mono: JetBrains Mono (acentos técnicos / labels)
+- Display: Space Grotesk
+- Body: Inter (300-700)
+- Mono: JetBrains Mono
 
-## Gradientes
-- gradient-text: branco → roxo claro → magenta (135deg)
-- gradient-hero: glow radial roxo no topo
-- gradient-card: card escuro 145deg
-- gradient-primary: roxo → magenta
+## Gradientes (sutis, sem neon excessivo)
+- gradient-text: off-white → azul claro (135deg)
+- gradient-hero: halo navy radial discreto
+- gradient-primary: navy deep → blue claro
 
-## Sombras com glow
-- shadow-glow: 60px primary 35%
-- shadow-glow-sm: 24px primary 25%
-- shadow-elegant: 20px 60px roxo 50%
+## Sombras
+- shadow-glow: 60px navy 30%
+- shadow-elegant: 24px navy 40%
+- shadow-card: 8px 32px preto 85%
 
-## Animações
-- blink (cursor)
-- float (avatar)
-- glow-pulse (FAB / CTAs)
+## Utilitário
+- .glass: backdrop-blur 14px + saturate 140%, fundo card 55% opacity
 
 ## Regra crítica
-Nunca usar cores hardcoded nos componentes. Sempre tokens semânticos via Tailwind
-ou variáveis CSS. Todas as cores em HSL.
+Tokens semânticos via Tailwind/CSS vars. Sempre HSL. Nada hardcoded.
