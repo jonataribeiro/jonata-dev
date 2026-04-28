@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, ArrowUpRight, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Mail, Github, Linkedin, ArrowUpRight, Phone, MapPin, MessageCircle, FileDown } from "lucide-react";
 import { site } from "@/config/site";
 
 export const Contact = () => {
