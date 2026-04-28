@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { stack } from "@/config/site";
+import { TechIcon } from "./TechIcon";
 
 export const Stack = () => {
   return (
@@ -14,7 +15,7 @@ export const Stack = () => {
         >
           <p className="font-mono text-sm text-primary mb-3">/ 02 — stack</p>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
-            Stack <span className="text-gradient">técnica</span> em construção.
+            Stack <span className="text-shine">técnica</span> em construção.
           </h2>
         </motion.div>
 
@@ -28,7 +29,7 @@ export const Stack = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="glass rounded-2xl p-6 hover:border-primary/50 hover:shadow-glow-sm transition-all"
+                className="group glass rounded-2xl p-6 hover:border-primary/50 hover:shadow-glow-sm transition-all"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-display font-semibold text-lg flex items-center gap-2">
@@ -45,13 +46,14 @@ export const Stack = () => {
                     {isUso ? "em uso" : "estudando"}
                   </span>
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   {g.items.map((item) => (
                     <li
                       key={item}
-                      className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="group/item flex items-center gap-2.5 font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      — {item}
+                      <TechIcon name={item} />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -63,3 +65,4 @@ export const Stack = () => {
     </section>
   );
 };
+
