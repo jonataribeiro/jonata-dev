@@ -105,7 +105,7 @@ export const Navbar = () => {
                   <a
                     href={l.href}
                     onClick={handleNavClick}
-                    className="block px-3 py-3 rounded-lg text-base font-medium text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                    className="nav-neon block px-3 py-3 rounded-lg text-base font-medium text-muted-foreground hover:bg-muted"
                   >
                     {l.label}
                   </a>
