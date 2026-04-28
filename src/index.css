@@ -14,21 +14,21 @@
 
 @layer base {
   :root {
-    /* ─────────── Base — roxo profundo + off-white ─────────── */
-    --background: 260 35% 6%;              /* roxo quase preto */
+    /* ─────────── Base — roxo profundo escuro + off-white ─────────── */
+    --background: 265 40% 4%;              /* roxo quase preto, mais escuro */
     --foreground: 280 20% 97%;             /* off-white levemente lilás */
 
-    --card: 260 30% 9%;                    /* card roxo escuro */
+    --card: 265 35% 7%;                    /* card roxo muito escuro */
     --card-foreground: 280 20% 97%;
 
-    --popover: 260 30% 9%;
+    --popover: 265 35% 7%;
     --popover-foreground: 280 20% 97%;
 
-    /* ─────────── Acento — roxo/violeta neon ─────────── */
-    --primary: 270 92% 65%;                /* violeta principal */
-    --primary-foreground: 260 35% 6%;
-    --primary-glow: 280 100% 75%;          /* glow lilás */
-    --primary-deep: 265 85% 45%;           /* roxo profundo */
+    /* ─────────── Acento — roxo/violeta neon (mais profundo) ─────────── */
+    --primary: 268 88% 58%;                /* violeta principal mais denso */
+    --primary-foreground: 280 25% 98%;
+    --primary-glow: 278 95% 70%;           /* glow lilás */
+    --primary-deep: 265 85% 38%;           /* roxo profundo */
 
     --secondary: 260 25% 14%;
     --secondary-foreground: 280 20% 97%;
