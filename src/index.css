@@ -266,9 +266,9 @@
     pointer-events: none;
     opacity: 0.45;
   }
-  .bg-orb-primary { background: hsl(215 88% 50% / 0.45); }
-  .bg-orb-accent  { background: hsl(200 90% 55% / 0.35); }
-  .bg-orb-deep    { background: hsl(220 80% 40% / 0.40); }
+  .bg-orb-primary { background: hsl(270 92% 60% / 0.50); }
+  .bg-orb-accent  { background: hsl(285 95% 65% / 0.40); }
+  .bg-orb-deep    { background: hsl(265 85% 45% / 0.45); }
 
   /* Noise sutil para textura cinematográfica */
   .bg-noise::before {
