@@ -30,7 +30,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-bold text-[clamp(2.5rem,7vw,5.5rem)] tracking-tight leading-[1.05] mb-4"
           >
-            Jônata <span className="text-gradient">Ribeiro</span>
+            Jônata <span className="text-shine">Ribeiro</span>
           </motion.h1>
 
           <motion.h2
