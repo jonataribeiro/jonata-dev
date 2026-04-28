@@ -284,4 +284,77 @@
   @keyframes aurora-spin {
     to { transform: rotate(360deg); }
   }
+
+  /* ─── Efeito "raio/shine" que passa sobre o texto/imagem ─── */
+  @keyframes shine-sweep {
+    0%   { background-position: -200% 0; }
+    60%  { background-position: 200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .text-shine {
+    background-image: linear-gradient(
+      110deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--foreground)) 35%,
+      hsl(var(--primary-glow)) 48%,
+      hsl(280 100% 92%) 50%,
+      hsl(var(--primary-glow)) 52%,
+      hsl(var(--foreground)) 65%,
+      hsl(var(--foreground)) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shine-sweep 4.5s ease-in-out infinite;
+  }
+
+  /* Raio/shine passando sobre a imagem (usar em elemento absoluto sobre a foto) */
+  @keyframes shine-image {
+    0%   { transform: translateX(-120%) skewX(-20deg); opacity: 0; }
+    40%  { opacity: 1; }
+    100% { transform: translateX(220%) skewX(-20deg); opacity: 0; }
+  }
+  .image-shine {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+  .image-shine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(
+      100deg,
+      transparent 0%,
+      hsl(var(--primary-glow) / 0.0) 30%,
+      hsl(var(--primary-glow) / 0.55) 50%,
+      hsl(var(--primary-glow) / 0.0) 70%,
+      transparent 100%
+    );
+    filter: blur(2px);
+    animation: shine-image 5s ease-in-out infinite;
+  }
+
+  /* Pulso orbital atrás da foto */
+  @keyframes orbit-pulse {
+    0%, 100% { transform: scale(1);   opacity: 0.55; }
+    50%      { transform: scale(1.08); opacity: 0.85; }
+  }
+  .orbit-pulse {
+    animation: orbit-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes orbit-spin {
+    to { transform: rotate(360deg); }
+  }
+  .orbit-spin {
+    animation: orbit-spin 20s linear infinite;
+  }
 }
