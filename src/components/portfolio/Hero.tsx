@@ -66,12 +66,10 @@ export const Hero = () => {
               <ArrowDown className="w-4 h-4" />
             </a>
             <a
-              href={site.resumeUrl}
-              download
+              href="#contato"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border text-foreground font-semibold hover:border-primary hover:text-primary transition-all"
             >
-              <FileDown className="w-4 h-4" />
-              Baixar Currículo
+              Vamos conversar
             </a>
             <a
               href={`mailto:${site.email}`}
