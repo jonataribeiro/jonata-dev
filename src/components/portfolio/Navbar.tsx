@@ -39,7 +39,7 @@ export const Navbar = () => {
       <nav className="container flex items-center justify-between py-4">
         <a
           href="#top"
-          className="font-display font-bold text-lg tracking-tight"
+          className="font-display font-bold text-lg tracking-tight logo-neon"
           aria-label={`Ir para o topo — ${site.domain}`}
         >
           <span className="text-foreground">jonataribeiro</span>
@@ -52,7 +52,7 @@ export const Navbar = () => {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="nav-neon text-muted-foreground"
               >
                 {l.label}
               </a>
@@ -64,14 +64,14 @@ export const Navbar = () => {
           <a
             href={site.resumeUrl}
             download
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-all"
+            className="btn-outline-neon inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-medium"
           >
             <FileDown className="w-4 h-4" />
             Currículo
           </a>
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:shadow-glow-sm transition-all"
+            className="btn-neon inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold"
           >
             Vamos conversar
           </a>
@@ -105,7 +105,7 @@ export const Navbar = () => {
                   <a
                     href={l.href}
                     onClick={handleNavClick}
-                    className="block px-3 py-3 rounded-lg text-base font-medium text-muted-foreground hover:text-primary hover:bg-muted transition-colors"
+                    className="nav-neon block px-3 py-3 rounded-lg text-base font-medium text-muted-foreground hover:bg-muted"
                   >
                     {l.label}
                   </a>
@@ -116,7 +116,7 @@ export const Navbar = () => {
                   href={site.resumeUrl}
                   download
                   onClick={handleNavClick}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-all"
+                  className="btn-outline-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border text-sm font-medium"
                 >
                   <FileDown className="w-4 h-4" />
                   Currículo
@@ -124,7 +124,7 @@ export const Navbar = () => {
                 <a
                   href="#contato"
                   onClick={handleNavClick}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
+                  className="btn-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
                 >
                   Conversar
                 </a>
