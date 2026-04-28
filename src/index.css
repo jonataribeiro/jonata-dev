@@ -14,21 +14,21 @@
 
 @layer base {
   :root {
-    /* ─────────── Base — roxo profundo + off-white ─────────── */
-    --background: 260 35% 6%;              /* roxo quase preto */
+    /* ─────────── Base — roxo profundo escuro + off-white ─────────── */
+    --background: 265 40% 4%;              /* roxo quase preto, mais escuro */
     --foreground: 280 20% 97%;             /* off-white levemente lilás */
 
-    --card: 260 30% 9%;                    /* card roxo escuro */
+    --card: 265 35% 7%;                    /* card roxo muito escuro */
     --card-foreground: 280 20% 97%;
 
-    --popover: 260 30% 9%;
+    --popover: 265 35% 7%;
     --popover-foreground: 280 20% 97%;
 
-    /* ─────────── Acento — roxo/violeta neon ─────────── */
-    --primary: 270 92% 65%;                /* violeta principal */
-    --primary-foreground: 260 35% 6%;
-    --primary-glow: 280 100% 75%;          /* glow lilás */
-    --primary-deep: 265 85% 45%;           /* roxo profundo */
+    /* ─────────── Acento — roxo/violeta neon (mais profundo) ─────────── */
+    --primary: 268 88% 58%;                /* violeta principal mais denso */
+    --primary-foreground: 280 25% 98%;
+    --primary-glow: 278 95% 70%;           /* glow lilás */
+    --primary-deep: 265 85% 38%;           /* roxo profundo */
 
     --secondary: 260 25% 14%;
     --secondary-foreground: 280 20% 97%;
@@ -283,5 +283,78 @@
 
   @keyframes aurora-spin {
     to { transform: rotate(360deg); }
+  }
+
+  /* ─── Efeito "raio/shine" que passa sobre o texto/imagem ─── */
+  @keyframes shine-sweep {
+    0%   { background-position: -200% 0; }
+    60%  { background-position: 200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .text-shine {
+    background-image: linear-gradient(
+      110deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--foreground)) 35%,
+      hsl(var(--primary-glow)) 48%,
+      hsl(280 100% 92%) 50%,
+      hsl(var(--primary-glow)) 52%,
+      hsl(var(--foreground)) 65%,
+      hsl(var(--foreground)) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: shine-sweep 4.5s ease-in-out infinite;
+  }
+
+  /* Raio/shine passando sobre a imagem (usar em elemento absoluto sobre a foto) */
+  @keyframes shine-image {
+    0%   { transform: translateX(-120%) skewX(-20deg); opacity: 0; }
+    40%  { opacity: 1; }
+    100% { transform: translateX(220%) skewX(-20deg); opacity: 0; }
+  }
+  .image-shine {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+  .image-shine::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(
+      100deg,
+      transparent 0%,
+      hsl(var(--primary-glow) / 0.0) 30%,
+      hsl(var(--primary-glow) / 0.55) 50%,
+      hsl(var(--primary-glow) / 0.0) 70%,
+      transparent 100%
+    );
+    filter: blur(2px);
+    animation: shine-image 5s ease-in-out infinite;
+  }
+
+  /* Pulso orbital atrás da foto */
+  @keyframes orbit-pulse {
+    0%, 100% { transform: scale(1);   opacity: 0.55; }
+    50%      { transform: scale(1.08); opacity: 0.85; }
+  }
+  .orbit-pulse {
+    animation: orbit-pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes orbit-spin {
+    to { transform: rotate(360deg); }
+  }
+  .orbit-spin {
+    animation: orbit-spin 20s linear infinite;
   }
 }

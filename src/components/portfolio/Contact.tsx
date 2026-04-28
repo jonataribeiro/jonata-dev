@@ -21,7 +21,7 @@ export const Contact = () => {
         >
           <p className="font-mono text-sm text-primary mb-3">/ 06 — contato</p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-tight mb-6">
-            Onde a técnica <span className="text-gradient">encontra a oportunidade</span>.
+            Onde a técnica <span className="text-shine">encontra a oportunidade</span>.
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto mb-12">
             Em busca da primeira oportunidade no mercado de tecnologia.
@@ -140,16 +140,128 @@ export const Contact = () => {
   );
 };
 
-export const Footer = () => (
-  <footer className="border-t border-border py-8">
-    <div className="container flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-      <p className="font-mono">
-        © {new Date().getFullYear()}{" "}
-        <span className="text-foreground">{site.domain}</span>
-      </p>
-      <p className="font-mono text-xs">
-        Construído com React, Tailwind & ☕
-      </p>
-    </div>
-  </footer>
-);
+export const Footer = () => {
+  const whatsappHref = `https://wa.me/${site.whatsapp.number}?text=${encodeURIComponent(
+    site.whatsapp.message
+  )}`;
+
+  return (
+    <footer className="relative border-t border-border mt-12">
+      {/* Halo sutil no topo do footer */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent"
+      />
+
+      <div className="container py-14">
+        <div className="grid gap-10 md:grid-cols-3 mb-10">
+          {/* Brand */}
+          <div>
+            <a
+              href="#top"
+              className="inline-flex font-display font-bold text-xl tracking-tight logo-neon"
+            >
+              <span className="text-foreground">jonataribeiro</span>
+              <span className="text-primary">.dev</span>
+            </a>
+            <p className="mt-3 text-sm text-muted-foreground max-w-xs leading-relaxed">
+              Analista e Desenvolvedor Full-Stack em construção — disciplina, técnica e propósito.
+            </p>
+          </div>
+
+          {/* Contatos */}
+          <div>
+            <h4 className="font-display font-semibold text-sm mb-4 text-foreground">Contato</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Mail className="w-4 h-4" /> {site.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${site.emailAlt}`}
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Mail className="w-4 h-4" /> {site.emailAlt}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" /> WhatsApp
+                </a>
+              </li>
+              <li className="inline-flex items-center gap-2 text-muted-foreground">
+                <MapPin className="w-4 h-4" /> {site.location}
+              </li>
+            </ul>
+          </div>
+
+          {/* Navegação rápida */}
+          <div>
+            <h4 className="font-display font-semibold text-sm mb-4 text-foreground">Navegar</h4>
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+              <li><a href="#sobre" className="text-muted-foreground hover:text-primary transition-colors">Sobre</a></li>
+              <li><a href="#stack" className="text-muted-foreground hover:text-primary transition-colors">Stack</a></li>
+              <li><a href="#trajetoria" className="text-muted-foreground hover:text-primary transition-colors">Trajetória</a></li>
+              <li><a href="#projetos" className="text-muted-foreground hover:text-primary transition-colors">Projetos</a></li>
+              <li><a href="#contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</a></li>
+              <li>
+                <a
+                  href={site.resumeUrl}
+                  download
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Currículo
+                </a>
+              </li>
+            </ul>
+
+            <div className="flex items-center gap-4 mt-5">
+              {site.social.github && (
+                <a
+                  href={site.social.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+              )}
+              {site.social.linkedin && (
+                <a
+                  href={site.social.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-border text-xs text-muted-foreground">
+          <p className="font-mono">
+            © {new Date().getFullYear()}{" "}
+            <span className="text-foreground">{site.domain}</span> — Todos os direitos reservados.
+          </p>
+          <p className="font-mono">
+            Construído com React, TypeScript, Tailwind & ☕
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};

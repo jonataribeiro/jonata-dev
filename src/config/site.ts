@@ -47,7 +47,7 @@ export const site = {
 export const hero = {
   greeting: "Olá, eu sou",
   headline: "Jônata Ribeiro",
-  subheadline: "Transição estratégica para Desenvolvimento Full-Stack",
+  subheadline: "Analista e Desenvolvedor Full-Stack em construção",
   description:
     "Construo software com a mesma disciplina que aplico no serviço público: precisão, processo e responsabilidade. Foco em React, TypeScript e Node.js — não para apenas rodar, mas para durar.",
 } as const;

@@ -30,7 +30,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-bold text-[clamp(2.5rem,7vw,5.5rem)] tracking-tight leading-[1.05] mb-4"
           >
-            Jônata <span className="text-gradient">Ribeiro</span>
+            Jônata <span className="text-shine">Ribeiro</span>
           </motion.h1>
 
           <motion.h2
@@ -121,14 +121,29 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2"
         >
-          <div className="relative animate-float">
-            <div className="absolute -inset-8 bg-primary/30 rounded-full blur-3xl" aria-hidden />
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-primary/50 shadow-elegant">
+          <div className="relative">
+            {/* Halo violeta pulsante */}
+            <div
+              aria-hidden
+              className="absolute -inset-10 rounded-full bg-primary/35 blur-3xl orbit-pulse"
+            />
+            {/* Anel gradient rotativo atrás da foto */}
+            <div
+              aria-hidden
+              className="absolute -inset-3 rounded-full opacity-70 orbit-spin"
+              style={{
+                background:
+                  "conic-gradient(from 0deg, hsl(var(--primary) / 0.0) 0deg, hsl(var(--primary-glow) / 0.8) 90deg, hsl(var(--primary) / 0.0) 180deg, hsl(var(--accent) / 0.8) 270deg, hsl(var(--primary) / 0.0) 360deg)",
+                filter: "blur(8px)",
+              }}
+            />
+            {/* Foto (sem borda) */}
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant">
               {/*
                 📸 TROQUE A FOTO:
                 - Substitua o arquivo em src/assets/avatar.jpg pela sua foto
-                - Use uma foto quadrada (1:1), boa iluminação e fundo neutro
-                - A classe object-top evita cortar o topo da cabeça
+                - Foto quadrada (1:1), boa iluminação, fundo neutro
+                - object-top evita cortar o topo da cabeça
               */}
               <img
                 src={avatar}
@@ -137,6 +152,8 @@ export const Hero = () => {
                 height={768}
                 className="w-full h-full object-cover object-top scale-105"
               />
+              {/* Raio/shine passando sobre a foto */}
+              <div className="image-shine" aria-hidden />
             </div>
             {site.available && (
               <div className="absolute -bottom-2 -right-2 bg-card border border-border rounded-full px-4 py-2 font-mono text-xs flex items-center gap-2 shadow-card-elegant">
