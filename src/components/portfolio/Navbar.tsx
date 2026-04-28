@@ -116,7 +116,7 @@ export const Navbar = () => {
                   href={site.resumeUrl}
                   download
                   onClick={handleNavClick}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border text-sm font-medium hover:border-primary hover:text-primary transition-all"
+                  className="btn-outline-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border text-sm font-medium"
                 >
                   <FileDown className="w-4 h-4" />
                   Currículo
@@ -124,7 +124,7 @@ export const Navbar = () => {
                 <a
                   href="#contato"
                   onClick={handleNavClick}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
+                  className="btn-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
                 >
                   Conversar
                 </a>
