@@ -8,7 +8,6 @@ const links = [
   { href: "#stack", label: "Stack" },
   { href: "#trajetoria", label: "Trajetória" },
   { href: "#projetos", label: "Projetos" },
-  { href: "#filosofia", label: "Filosofia" },
   { href: "#contato", label: "Contato" },
 ];
 
