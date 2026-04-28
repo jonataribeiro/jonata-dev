@@ -28,17 +28,28 @@ export const Contact = () => {
             Se meu perfil combina com o que você procura, vamos conversar.
           </p>
 
-          {/* CTA principal — WhatsApp */}
-          <a
-            href={whatsappHref}
-            target="_blank"
-            rel="noreferrer"
-            className="group inline-flex items-center gap-3 px-6 sm:px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-base sm:text-lg hover:shadow-glow hover:scale-[1.02] transition-all mb-4 max-w-full"
-          >
-            <MessageCircle className="w-5 h-5 shrink-0" />
-            <span className="truncate">Falar no WhatsApp</span>
-            <ArrowUpRight className="w-5 h-5 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
+          {/* CTAs principais — WhatsApp + Currículo */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-3 px-6 sm:px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-base sm:text-lg hover:shadow-glow hover:scale-[1.02] transition-all max-w-full"
+            >
+              <MessageCircle className="w-5 h-5 shrink-0" />
+              <span className="truncate">Falar no WhatsApp</span>
+              <ArrowUpRight className="w-5 h-5 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+
+            <a
+              href={site.resumeUrl}
+              download
+              className="group inline-flex items-center gap-3 px-6 sm:px-8 py-4 rounded-full border-2 border-primary/60 text-foreground font-semibold text-base sm:text-lg hover:border-primary hover:text-primary hover:shadow-glow-sm transition-all"
+            >
+              <FileDown className="w-5 h-5 shrink-0" />
+              <span>Baixar Currículo</span>
+            </a>
+          </div>
 
           {/* Grid de contatos */}
           <div className="grid sm:grid-cols-2 gap-3 mt-8 text-left">
