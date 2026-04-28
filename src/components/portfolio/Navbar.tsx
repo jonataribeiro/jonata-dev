@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, FileDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { site } from "@/config/site";
 
 const links = [
