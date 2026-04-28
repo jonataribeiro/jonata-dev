@@ -39,7 +39,7 @@ export const Navbar = () => {
       <nav className="container flex items-center justify-between py-4">
         <a
           href="#top"
-          className="font-display font-bold text-lg tracking-tight"
+          className="font-display font-bold text-lg tracking-tight logo-neon"
           aria-label={`Ir para o topo — ${site.domain}`}
         >
           <span className="text-foreground">jonataribeiro</span>
@@ -52,7 +52,7 @@ export const Navbar = () => {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="nav-neon text-muted-foreground"
               >
                 {l.label}
               </a>
@@ -64,14 +64,14 @@ export const Navbar = () => {
           <a
             href={site.resumeUrl}
             download
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-all"
+            className="btn-outline-neon inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-medium"
           >
             <FileDown className="w-4 h-4" />
             Currículo
           </a>
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:shadow-glow-sm transition-all"
+            className="btn-neon inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold"
           >
             Vamos conversar
           </a>
