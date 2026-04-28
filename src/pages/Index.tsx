@@ -40,7 +40,7 @@ const Index = () => {
       <Stack />
       <Timeline />
       <Projects />
-      <Philosophy />
+      
       <Contact />
       <Footer />
       <WhatsAppFab />
