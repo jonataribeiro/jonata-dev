@@ -138,7 +138,7 @@ export const Hero = () => {
               }}
             />
             {/* Foto (sem borda) */}
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant animate-float">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant">
               {/*
                 📸 TROQUE A FOTO:
                 - Substitua o arquivo em src/assets/avatar.jpg pela sua foto
