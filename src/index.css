@@ -92,11 +92,11 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-feature-settings: "ss01", "cv11";
-    /* Background ambiente sóbrio: dois leves halos navy */
+    /* Background ambiente: halos roxo/violeta neon */
     background-image:
-      radial-gradient(ellipse 55% 40% at 15% 8%,  hsl(215 88% 50% / 0.08), transparent 60%),
-      radial-gradient(ellipse 50% 35% at 85% 18%, hsl(200 90% 55% / 0.06), transparent 60%),
-      radial-gradient(ellipse 65% 45% at 50% 100%, hsl(220 80% 45% / 0.07), transparent 60%);
+      radial-gradient(ellipse 55% 40% at 15% 8%,  hsl(270 92% 55% / 0.12), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 85% 18%, hsl(285 95% 60% / 0.10), transparent 60%),
+      radial-gradient(ellipse 65% 45% at 50% 100%, hsl(265 85% 45% / 0.12), transparent 60%);
     background-attachment: fixed;
   }
 
