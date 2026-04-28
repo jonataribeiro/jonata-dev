@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, FileDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { site } from "@/config/site";
 
 const links = [
@@ -8,7 +8,6 @@ const links = [
   { href: "#stack", label: "Stack" },
   { href: "#trajetoria", label: "Trajetória" },
   { href: "#projetos", label: "Projetos" },
-  { href: "#filosofia", label: "Filosofia" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -62,14 +61,6 @@ export const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href={site.resumeUrl}
-            download
-            className="btn-outline-neon inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-medium"
-          >
-            <FileDown className="w-4 h-4" />
-            Currículo
-          </a>
-          <a
             href="#contato"
             className="btn-neon inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold"
           >
@@ -111,22 +102,13 @@ export const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li className="grid grid-cols-2 gap-3 mt-4">
-                <a
-                  href={site.resumeUrl}
-                  download
-                  onClick={handleNavClick}
-                  className="btn-outline-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border text-sm font-medium"
-                >
-                  <FileDown className="w-4 h-4" />
-                  Currículo
-                </a>
+              <li className="mt-4">
                 <a
                   href="#contato"
                   onClick={handleNavClick}
-                  className="btn-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
+                  className="btn-neon inline-flex w-full items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
                 >
-                  Conversar
+                  Vamos conversar
                 </a>
               </li>
             </ul>

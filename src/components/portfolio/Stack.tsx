@@ -19,31 +19,45 @@ export const Stack = () => {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {stack.map((g, i) => (
-            <motion.div
-              key={g.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="glass rounded-2xl p-6 hover:border-primary/40 transition-colors"
-            >
-              <h3 className="font-display font-semibold text-lg mb-4 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                {g.title}
-              </h3>
-              <ul className="space-y-2">
-                {g.items.map((item) => (
-                  <li
-                    key={item}
-                    className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+          {stack.map((g, i) => {
+            const isUso = g.level === "uso";
+            return (
+              <motion.div
+                key={g.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="glass rounded-2xl p-6 hover:border-primary/50 hover:shadow-glow-sm transition-all"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-display font-semibold text-lg flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    {g.title.replace(/ — .*/, "")}
+                  </h3>
+                  <span
+                    className={`font-mono text-[10px] uppercase tracking-wider px-2 py-1 rounded-full border ${
+                      isUso
+                        ? "border-primary/40 bg-primary/10 text-primary"
+                        : "border-accent/40 bg-accent/10 text-accent"
+                    }`}
                   >
-                    — {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+                    {isUso ? "em uso" : "estudando"}
+                  </span>
+                </div>
+                <ul className="space-y-2">
+                  {g.items.map((item) => (
+                    <li
+                      key={item}
+                      className="font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      — {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

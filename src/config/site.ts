@@ -62,23 +62,31 @@ export const about = {
   ],
 } as const;
 
-/** Stack de tecnologias */
+/**
+ * Stack de tecnologias.
+ * `level`: "uso" (uso no dia a dia / projetos) | "estudo" (aprofundando agora)
+ * Edite livremente — os cards renderizam a partir desta lista.
+ */
 export const stack = [
   {
-    title: "Frontend",
+    title: "Frontend — em uso",
+    level: "uso" as const,
     items: ["React", "TypeScript", "Tailwind CSS", "Vite", "HTML5", "CSS3"],
   },
   {
-    title: "Backend & Dados",
-    items: ["Node.js", "Express", "REST APIs", "SQL", "PostgreSQL"],
+    title: "Backend & Dados — em uso",
+    level: "uso" as const,
+    items: ["Node.js", "Express", "REST APIs", "Git & GitHub"],
   },
   {
-    title: "Ferramentas",
-    items: ["Git & GitHub", "VS Code", "Figma", "Vercel", "Postman"],
+    title: "Estudando — SQL & Dados",
+    level: "estudo" as const,
+    items: ["SQL", "PostgreSQL", "MySQL", "Modelagem de dados", "Queries & Joins"],
   },
   {
-    title: "Aprofundando",
-    items: ["Next.js", "Testes (Vitest)", "Clean Code", "Inglês técnico"],
+    title: "Estudando — Avançado",
+    level: "estudo" as const,
+    items: ["Next.js", "Testes (Vitest)", "Clean Code", "Inglês técnico", "Figma"],
   },
 ] as const;
 

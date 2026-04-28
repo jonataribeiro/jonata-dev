@@ -14,37 +14,37 @@
 
 @layer base {
   :root {
-    /* ─────────── Base — azul marinho profundo + off-white ─────────── */
-    --background: 220 35% 6%;              /* navy quase preto */
-    --foreground: 40 25% 96%;              /* off-white */
+    /* ─────────── Base — roxo profundo + off-white ─────────── */
+    --background: 260 35% 6%;              /* roxo quase preto */
+    --foreground: 280 20% 97%;             /* off-white levemente lilás */
 
-    --card: 220 30% 9%;                    /* cinza espacial */
-    --card-foreground: 40 25% 96%;
+    --card: 260 30% 9%;                    /* card roxo escuro */
+    --card-foreground: 280 20% 97%;
 
-    --popover: 220 30% 9%;
-    --popover-foreground: 40 25% 96%;
+    --popover: 260 30% 9%;
+    --popover-foreground: 280 20% 97%;
 
-    /* ─────────── Acento — azul marinho vivo (sóbrio) ─────────── */
-    --primary: 215 88% 62%;                /* navy/blue principal */
-    --primary-foreground: 220 35% 6%;
-    --primary-glow: 210 95% 72%;           /* glow azul claro */
-    --primary-deep: 220 80% 42%;           /* navy profundo */
+    /* ─────────── Acento — roxo/violeta neon ─────────── */
+    --primary: 270 92% 65%;                /* violeta principal */
+    --primary-foreground: 260 35% 6%;
+    --primary-glow: 280 100% 75%;          /* glow lilás */
+    --primary-deep: 265 85% 45%;           /* roxo profundo */
 
-    --secondary: 220 25% 14%;              /* cinza espacial mais claro */
-    --secondary-foreground: 40 25% 96%;
+    --secondary: 260 25% 14%;
+    --secondary-foreground: 280 20% 97%;
 
-    --muted: 220 22% 12%;
-    --muted-foreground: 220 12% 65%;       /* cinza neutro */
+    --muted: 260 22% 12%;
+    --muted-foreground: 270 12% 68%;
 
-    --accent: 200 90% 60%;                 /* azul ciano sutil */
-    --accent-foreground: 220 35% 6%;
+    --accent: 285 95% 65%;                 /* magenta/violeta vibrante */
+    --accent-foreground: 260 35% 6%;
 
     --destructive: 0 70% 55%;
-    --destructive-foreground: 40 25% 98%;
+    --destructive-foreground: 280 20% 98%;
 
-    --border: 220 22% 16%;
-    --input: 220 22% 16%;
-    --ring: 215 88% 62%;
+    --border: 265 25% 18%;
+    --input: 265 25% 18%;
+    --ring: 270 92% 65%;
 
     --radius: 0.875rem;
 
@@ -52,31 +52,31 @@
     --whatsapp: 142 70% 45%;
     --whatsapp-foreground: 0 0% 100%;
 
-    /* ─────────── Gradientes — discretos e elegantes ─────────── */
-    --gradient-hero: radial-gradient(ellipse 80% 55% at 50% 0%, hsl(215 88% 55% / 0.18), transparent 70%);
-    --gradient-text: linear-gradient(135deg, hsl(40 25% 99%) 0%, hsl(210 90% 82%) 55%, hsl(215 88% 70%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 30% 11%), hsl(220 32% 7%));
-    --gradient-border: linear-gradient(135deg, hsl(215 88% 62% / 0.45), hsl(220 22% 16%));
-    --gradient-primary: linear-gradient(135deg, hsl(220 80% 48%), hsl(210 95% 65%));
-    --gradient-aurora: conic-gradient(from 180deg at 50% 50%, hsl(215 88% 55% / 0.10), hsl(200 90% 60% / 0.08), hsl(220 80% 45% / 0.10), hsl(215 88% 55% / 0.10));
+    /* ─────────── Gradientes — roxo neon ─────────── */
+    --gradient-hero: radial-gradient(ellipse 80% 55% at 50% 0%, hsl(270 92% 60% / 0.25), transparent 70%);
+    --gradient-text: linear-gradient(135deg, hsl(280 20% 99%) 0%, hsl(285 100% 85%) 50%, hsl(270 92% 72%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(260 30% 11%), hsl(260 32% 7%));
+    --gradient-border: linear-gradient(135deg, hsl(270 92% 65% / 0.55), hsl(265 25% 18%));
+    --gradient-primary: linear-gradient(135deg, hsl(265 85% 50%), hsl(285 95% 68%));
+    --gradient-aurora: conic-gradient(from 180deg at 50% 50%, hsl(270 92% 60% / 0.14), hsl(285 95% 60% / 0.12), hsl(265 85% 45% / 0.14), hsl(270 92% 60% / 0.14));
 
-    /* ─────────── Sombras — profissionais, sem neon excessivo ─────────── */
-    --shadow-glow: 0 0 60px hsl(215 88% 55% / 0.30);
-    --shadow-glow-sm: 0 0 24px hsl(215 88% 55% / 0.25);
-    --shadow-card: 0 8px 32px -8px hsl(220 50% 2% / 0.85);
-    --shadow-elegant: 0 24px 60px -22px hsl(215 88% 40% / 0.40);
+    /* ─────────── Sombras — glow violeta ─────────── */
+    --shadow-glow: 0 0 60px hsl(270 92% 60% / 0.45);
+    --shadow-glow-sm: 0 0 24px hsl(270 92% 60% / 0.35);
+    --shadow-card: 0 8px 32px -8px hsl(260 50% 2% / 0.85);
+    --shadow-elegant: 0 24px 60px -22px hsl(270 92% 45% / 0.50);
 
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Sidebar */
-    --sidebar-background: 220 35% 6%;
-    --sidebar-foreground: 40 25% 96%;
-    --sidebar-primary: 215 88% 62%;
-    --sidebar-primary-foreground: 220 35% 6%;
-    --sidebar-accent: 220 25% 14%;
-    --sidebar-accent-foreground: 40 25% 96%;
-    --sidebar-border: 220 22% 16%;
-    --sidebar-ring: 215 88% 62%;
+    --sidebar-background: 260 35% 6%;
+    --sidebar-foreground: 280 20% 97%;
+    --sidebar-primary: 270 92% 65%;
+    --sidebar-primary-foreground: 260 35% 6%;
+    --sidebar-accent: 260 25% 14%;
+    --sidebar-accent-foreground: 280 20% 97%;
+    --sidebar-border: 265 25% 18%;
+    --sidebar-ring: 270 92% 65%;
   }
 }
 
@@ -92,11 +92,11 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-feature-settings: "ss01", "cv11";
-    /* Background ambiente sóbrio: dois leves halos navy */
+    /* Background ambiente: halos roxo/violeta neon */
     background-image:
-      radial-gradient(ellipse 55% 40% at 15% 8%,  hsl(215 88% 50% / 0.08), transparent 60%),
-      radial-gradient(ellipse 50% 35% at 85% 18%, hsl(200 90% 55% / 0.06), transparent 60%),
-      radial-gradient(ellipse 65% 45% at 50% 100%, hsl(220 80% 45% / 0.07), transparent 60%);
+      radial-gradient(ellipse 55% 40% at 15% 8%,  hsl(270 92% 55% / 0.12), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 85% 18%, hsl(285 95% 60% / 0.10), transparent 60%),
+      radial-gradient(ellipse 65% 45% at 50% 100%, hsl(265 85% 45% / 0.12), transparent 60%);
     background-attachment: fixed;
   }
 
@@ -266,9 +266,9 @@
     pointer-events: none;
     opacity: 0.45;
   }
-  .bg-orb-primary { background: hsl(215 88% 50% / 0.45); }
-  .bg-orb-accent  { background: hsl(200 90% 55% / 0.35); }
-  .bg-orb-deep    { background: hsl(220 80% 40% / 0.40); }
+  .bg-orb-primary { background: hsl(270 92% 60% / 0.50); }
+  .bg-orb-accent  { background: hsl(285 95% 65% / 0.40); }
+  .bg-orb-deep    { background: hsl(265 85% 45% / 0.45); }
 
   /* Noise sutil para textura cinematográfica */
   .bg-noise::before {
