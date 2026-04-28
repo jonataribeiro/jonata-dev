@@ -102,22 +102,13 @@ export const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li className="grid grid-cols-2 gap-3 mt-4">
-                <a
-                  href={site.resumeUrl}
-                  download
-                  onClick={handleNavClick}
-                  className="btn-outline-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg border border-border text-sm font-medium"
-                >
-                  <FileDown className="w-4 h-4" />
-                  Currículo
-                </a>
+              <li className="mt-4">
                 <a
                   href="#contato"
                   onClick={handleNavClick}
-                  className="btn-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
+                  className="btn-neon inline-flex w-full items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
                 >
-                  Conversar
+                  Vamos conversar
                 </a>
               </li>
             </ul>
