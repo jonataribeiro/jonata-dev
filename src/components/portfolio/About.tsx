@@ -34,7 +34,7 @@ export const About = () => {
           <p className="font-mono text-sm text-primary mb-3">/ 01 — sobre mim</p>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight max-w-3xl">
             Transição estratégica para o{" "}
-            <span className="text-gradient">desenvolvimento de software</span>.
+            <span className="text-shine">desenvolvimento de software</span>.
           </h2>
         </motion.div>
 

@@ -21,7 +21,7 @@ export const Contact = () => {
         >
           <p className="font-mono text-sm text-primary mb-3">/ 06 — contato</p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-tight mb-6">
-            Onde a técnica <span className="text-gradient">encontra a oportunidade</span>.
+            Onde a técnica <span className="text-shine">encontra a oportunidade</span>.
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto mb-12">
             Em busca da primeira oportunidade no mercado de tecnologia.

@@ -26,7 +26,7 @@ export const Timeline = () => {
           <div>
             <p className="font-mono text-sm text-primary mb-3">/ 03 — trajetória</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
-              Minha <span className="text-gradient">trajetória</span> acadêmica
+              Minha <span className="text-shine">trajetória</span> acadêmica
               e profissional.
             </h2>
           </div>

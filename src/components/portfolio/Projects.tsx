@@ -16,7 +16,7 @@ export const Projects = () => {
           <div>
             <p className="font-mono text-sm text-primary mb-3">/ 04 — projetos</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
-              Coisas que <span className="text-gradient">construí</span>.
+              Coisas que <span className="text-shine">construí</span>.
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
