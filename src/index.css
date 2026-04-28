@@ -183,6 +183,66 @@
       var(--gradient-border) border-box;
   }
 
+  /* ─── Neon menu: brilho sutil no hover + link ativo ─── */
+  .nav-neon {
+    position: relative;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+  }
+  .nav-neon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px hsl(var(--primary) / 0.8), 0 0 16px hsl(var(--primary) / 0.5);
+  }
+  .nav-neon:hover {
+    color: hsl(var(--primary));
+    text-shadow:
+      0 0 6px hsl(var(--primary) / 0.75),
+      0 0 14px hsl(var(--primary) / 0.45);
+  }
+  .nav-neon:hover::after {
+    transform: scaleX(1);
+  }
+
+  .logo-neon {
+    text-shadow:
+      0 0 10px hsl(var(--primary) / 0.55),
+      0 0 22px hsl(var(--primary) / 0.35);
+  }
+
+  .btn-neon {
+    box-shadow:
+      0 0 0 1px hsl(var(--primary) / 0.45),
+      0 0 14px hsl(var(--primary) / 0.35),
+      0 0 32px hsl(var(--primary) / 0.25);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .btn-neon:hover {
+    box-shadow:
+      0 0 0 1px hsl(var(--primary) / 0.85),
+      0 0 22px hsl(var(--primary) / 0.65),
+      0 0 48px hsl(var(--primary) / 0.45);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-neon {
+    transition: all 0.25s ease;
+  }
+  .btn-outline-neon:hover {
+    border-color: hsl(var(--primary)) !important;
+    color: hsl(var(--primary));
+    box-shadow:
+      0 0 0 1px hsl(var(--primary) / 0.6),
+      0 0 18px hsl(var(--primary) / 0.4);
+  }
+
   /* ─── Glassmorphism sutil para cards de stack/filosofia ─── */
   .glass {
     background: hsl(var(--card) / 0.55);
