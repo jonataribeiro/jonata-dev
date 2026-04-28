@@ -61,14 +61,6 @@ export const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href={site.resumeUrl}
-            download
-            className="btn-outline-neon inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border text-sm font-medium"
-          >
-            <FileDown className="w-4 h-4" />
-            Currículo
-          </a>
-          <a
             href="#contato"
             className="btn-neon inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold"
           >
