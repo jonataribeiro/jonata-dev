@@ -122,19 +122,20 @@ export const Hero = () => {
           className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2"
         >
           <div className="relative animate-float">
-            <div className="absolute -inset-6 bg-primary/25 rounded-full blur-3xl" aria-hidden />
-            <div className="relative w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-primary/40 shadow-elegant">
+            <div className="absolute -inset-8 bg-primary/30 rounded-full blur-3xl" aria-hidden />
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-primary/50 shadow-elegant">
               {/*
                 📸 TROQUE A FOTO:
                 - Substitua o arquivo em src/assets/avatar.jpg pela sua foto
                 - Use uma foto quadrada (1:1), boa iluminação e fundo neutro
+                - A classe object-top evita cortar o topo da cabeça
               */}
               <img
                 src={avatar}
                 alt={`Foto de ${site.name}`}
                 width={768}
                 height={768}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top scale-105"
               />
             </div>
             {site.available && (
