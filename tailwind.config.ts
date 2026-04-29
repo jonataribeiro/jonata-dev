@@ -99,9 +99,11 @@ export default {
           "50%": { transform: "translateY(-8px)" },
         },
         "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.4)" },
-          "50%": { boxShadow: "0 0 40px hsl(var(--primary) / 0.7)" },
+          "0%, 100%": { boxShadow: "0 0 40px hsl(var(--primary) / 0.4)" },
+          "50%": { boxShadow: "0 0 80px hsl(var(--primary) / 0.7)" },
         },
+
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, FileDown } from "lucide-react";
 import { timeline, site } from "@/config/site";
 
+/**
+ * Mapeamento de ícones e legendas para os tipos de item da timeline.
+ * Facilita a expansão caso surjam novos tipos (ex: 'projetos', 'certificacoes').
+ */
 const iconMap = {
   education: GraduationCap,
   experience: Briefcase,
@@ -12,10 +16,16 @@ const labelMap = {
   experience: "Experiência",
 };
 
+/**
+ * Componente: Timeline
+ * Renderiza a linha do tempo acadêmica e profissional.
+ * Inclui header com botão de download de currículo e itens animados via Framer Motion.
+ */
 export const Timeline = () => {
   return (
     <section id="trajetoria" className="py-24 sm:py-32 relative">
       <div className="container max-w-5xl">
+        {/* Header da seção com título e ação de download */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +37,7 @@ export const Timeline = () => {
             <p className="font-mono text-sm text-primary mb-3">/ 03 — trajetória</p>
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">
               Minha <span className="text-shine">trajetória</span> acadêmica
-              e profissional.
+              <br /> e profissional.
             </h2>
           </div>
           <a
@@ -40,8 +50,9 @@ export const Timeline = () => {
           </a>
         </motion.div>
 
+        {/* Container da linha do tempo */}
         <div className="relative">
-          {/* Linha vertical */}
+          {/* Linha vertical que conecta os marcadores */}
           <div
             className="absolute left-4 sm:left-6 top-2 bottom-2 w-px bg-gradient-to-b from-primary/60 via-border to-transparent"
             aria-hidden
@@ -56,14 +67,15 @@ export const Timeline = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }} // Delay progressivo para animação em cascata
                   className="relative pl-14 sm:pl-20"
                 >
-                  {/* Marcador */}
+                  {/* Marcador do item (ícone) */}
                   <span className="absolute left-0 top-0 flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-card border border-primary/40 shadow-glow-sm">
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </span>
 
+                  {/* Card de conteúdo */}
                   <div className="bg-card-gradient border border-border rounded-2xl p-6 hover:border-primary/40 transition-colors">
                     <div className="flex flex-wrap items-center gap-3 mb-2">
                       <span className="font-mono text-xs text-primary bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full">

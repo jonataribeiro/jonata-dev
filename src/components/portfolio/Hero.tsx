@@ -121,13 +121,12 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2"
         >
-          <div className="relative">
-            {/* Halo violeta pulsante */}
+          {/* Adicionada a classe profile-wrapper para a flutuação */}
+          <div className="relative profile-wrapper">
             <div
               aria-hidden
               className="absolute -inset-10 rounded-full bg-primary/35 blur-3xl orbit-pulse"
             />
-            {/* Anel gradient rotativo atrás da foto */}
             <div
               aria-hidden
               className="absolute -inset-3 rounded-full opacity-70 orbit-spin"
@@ -137,14 +136,7 @@ export const Hero = () => {
                 filter: "blur(8px)",
               }}
             />
-            {/* Foto (sem borda) */}
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant">
-              {/*
-                📸 TROQUE A FOTO:
-                - Substitua o arquivo em src/assets/avatar.jpg pela sua foto
-                - Foto quadrada (1:1), boa iluminação, fundo neutro
-                - object-top evita cortar o topo da cabeça
-              */}
               <img
                 src={avatar}
                 alt={`Foto de ${site.name}`}
@@ -152,7 +144,6 @@ export const Hero = () => {
                 height={768}
                 className="w-full h-full object-cover object-top scale-105"
               />
-              {/* Raio/shine passando sobre a foto */}
               <div className="image-shine" aria-hidden />
             </div>
             {site.available && (

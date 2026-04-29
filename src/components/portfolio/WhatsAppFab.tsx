@@ -2,9 +2,13 @@ import { motion } from "framer-motion";
 import { site } from "@/config/site";
 
 /**
- * Botão flutuante de WhatsApp (FAB).
- * Fica fixo no canto inferior direito em todas as telas.
- * O número é configurado em src/config/site.ts → site.whatsapp
+ * Componente: WhatsAppFab (Floating Action Button)
+ * * Botão flutuante fixo no canto inferior direito para contato direto via WhatsApp.
+ * Utiliza o número e a mensagem padrão definidos no arquivo de configuração do site.
+ * * Funcionalidades:
+ * - Link dinâmico: Constrói a URL usando `wa.me` com `encodeURIComponent`.
+ * - Animações: Escala e opacidade via Framer Motion ao montar.
+ * - Interatividade: Efeito de pulso (ping) e Tooltip responsivo.
  */
 export const WhatsAppFab = () => {
   const { number, message } = site.whatsapp;
@@ -16,25 +20,27 @@ export const WhatsAppFab = () => {
       target="_blank"
       rel="noreferrer"
       aria-label="Conversar no WhatsApp"
+      // Animações de entrada
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4, delay: 1 }}
+      // Interações de hover e clique
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
       className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 group flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-whatsapp text-whatsapp-foreground shadow-elegant hover:shadow-glow transition-shadow"
     >
-      {/* Tooltip */}
+      {/* Tooltip informativo que aparece no desktop */}
       <span className="absolute right-full mr-3 px-3 py-1.5 rounded-lg bg-card border border-border text-sm font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity shadow-card-elegant hidden sm:block">
         Fale comigo no WhatsApp
       </span>
 
-      {/* Pulso decorativo */}
+      {/* Efeito visual de pulso (ping) para chamar atenção */}
       <span
         className="absolute inset-0 rounded-full bg-whatsapp animate-ping opacity-20"
         aria-hidden
       />
 
-      {/* Ícone oficial WhatsApp (SVG) */}
+      {/* Ícone oficial WhatsApp (SVG inline) */}
       <svg
         viewBox="0 0 24 24"
         fill="currentColor"
