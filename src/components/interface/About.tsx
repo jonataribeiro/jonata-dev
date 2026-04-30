@@ -20,18 +20,18 @@ import { about } from "@/config/site";
 const pillars = [
   {
     icon: Code2,
-    title: "Disciplina técnica",
-    text: "Código tipado, modular e mobile-first. Não escrevo para rodar — escrevo para durar.",
+    title: "Compromisso com o Código",
+    text: "Prezo por uma estrutura de código limpa e modular. Aplico os conceitos de tipagem e responsividade para garantir que a experiência do usuário seja consistente e confiável.",
   },
   {
     icon: Lightbulb,
-    title: "Visão analítica",
-    text: "Anos lidando com fluxos operacionais críticos. Depuro sistemas com a mesma clareza.",
+    title: "Reconheço minhas limitações",
+    text: "Entendo que o aprendizado é constante; por isso, encaro os desafios técnicos com a humildade de quem está sempre aprendendo e a determinação de quem busca a melhor solução.",
   },
   {
     icon: Rocket,
-    title: "Foco em resultado",
-    text: "Resiliência sob pressão e entrega de produto. Técnica a serviço da utilidade real.",
+    title: "Foco em Resultado",
+    text: "Acredito que a tecnologia só faz sentido quando é útil para alguém. Aplico minha resiliência para superar obstáculos técnicos, focado em entregar soluções que facilitem a vida das pessoas e gerem valor real.",
   },
 ];
 

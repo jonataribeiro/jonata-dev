@@ -21,7 +21,6 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Fecha menu ao clicar em link
   const handleNavClick = () => setOpen(false);
 
   return (
@@ -45,13 +44,13 @@ export const Navbar = () => {
           <span className="text-primary">.dev</span>
         </a>
 
-        {/* Desktop */}
+        {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="nav-neon text-muted-foreground"
+                className="nav-neon text-muted-foreground hover:text-primary transition-colors"
               >
                 {l.label}
               </a>
@@ -59,16 +58,17 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center gap-3">
-          <a
-            href="#contato"
-            className="btn-neon inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold"
-          >
-            Vamos conversar
-          </a>
-        </div>
+        {/* Desktop CTA Button - CORRIGIDO */}
+        <a
+          href="https://wa.me/5511974726780?text=Jônata,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
+        >
+          <span>💬</span> Contate-me
+        </a>
 
-        {/* Mobile toggle */}
+        {/* Mobile Toggle */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -80,7 +80,7 @@ export const Navbar = () => {
         </button>
       </nav>
 
-      {/* Mobile drawer */}
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -104,11 +104,13 @@ export const Navbar = () => {
               ))}
               <li className="mt-4">
                 <a
-                  href="#contato"
+                  href="https://wa.me/5511974726780?text=Jônata,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold w-full"
                   onClick={handleNavClick}
-                  className="btn-neon inline-flex w-full items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold"
                 >
-                  Vamos conversar
+                  Vamos conversar?
                 </a>
               </li>
             </ul>

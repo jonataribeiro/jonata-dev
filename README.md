@@ -1,54 +1,60 @@
-import type { Config } from "tailwindcss";
+# 🚀 Portfólio Profissional — Jônata Ribeiro
 
-/**
- * CONFIGURAÇÃO DO TAILWIND (Tailwind Config)
- * =========================================================================
- * Responsável por estender o tema base e definir a identidade visual (Design System).
- * * POR QUE AQUI?
- * Centralizamos as variações de cores, fontes e animações para evitar valores 
- * mágicos (hardcoded) nos componentes. Se a identidade visual mudar, mudamos aqui.
- */
-export default {
-  darkMode: ["class"], // Define que o modo escuro é controlado por classe CSS no <html>
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
-  prefix: "",
-  theme: {
-    container: {
-      center: true, // Garante alinhamento centralizado padrão para layouts
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
-    extend: {
-      /** * EXTENSÃO DE CORES
-       * Mantemos as variáveis CSS aqui para que elas respeitem os temas 
-       * (Light/Dark) definidos no seu CSS global.
-       */
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        // ... (resto da configuração)
-      },
-      /**
-       * ANIMAÇÕES E KEYFRAMES
-       * Documentamos o comportamento de entrada aqui para reuso em componentes
-       * como o seu WhatsAppFab e a Timeline.
-       */
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "ping-slow": "ping 3s cubic-bezier(0, 0, 0.2, 1) infinite",
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+Este é o repositório do meu portfólio pessoal, projetado para demonstrar competências técnicas em engenharia de software e análise de sistemas. O projeto aplica a disciplina e o rigor de processos do serviço público à construção de soluções digitais modernas e performáticas.
+
+**🌐 URL Oficial:** [jonataribeiro.dev](https://jonataribeiro.dev)
+
+---
+
+## 🛠️ Stack Tecnológica
+
+O projeto utiliza um ecossistema moderno focado em tipagem estrita e escalabilidade:
+
+*   **Frontend:** React 18 e TypeScript.
+*   **Estilização:** Tailwind CSS (Design responsivo e utilitário).
+*   **Animações:** Framer Motion (Experiência de usuário fluida).
+*   **Ícones:** Lucide React.
+*   **Build Tool:** Vite (Ambiente de desenvolvimento de alta velocidade).
+
+---
+
+## 📐 Arquitetura do Sistema
+
+Para garantir a manutenção e evitar conflitos de nomenclatura, a estrutura segue uma separação clara de responsabilidades:
+
+*   `src/components/interface/`: Componentes visuais modulares (Hero, About, Stack, etc.).
+*   `src/config/site.ts`: Fonte única de verdade para dados, links e configurações do site.
+*   `src/types/portfolio.ts`: Contratos de interfaces TypeScript para garantir a integridade dos dados.
+*   `src/assets/`: Recursos estáticos e currículo profissional.
+
+---
+
+## 👨‍💻 Perfil Técnico
+
+Sou **Jônata Emerson da Silva Ribeiro**, baseado em João Pessoa, Paraíba. Minha trajetória une a responsabilidade do setor público com a paixão pela tecnologia. 
+
+### **Foco Atual:**
+*   **Desenvolvimento Web:** Ecossistema Full-Stack (React, Node.js).
+*   **Bancos de Dados:** Gestão e modelagem (Oracle SQL, MySQL, SQL Server).
+*   **Metodologias:** Clean Code, Git Flow e Arquitetura de Software.
+
+---
+
+## 🚀 Como Executar
+
+1.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+2.  **Inicie o ambiente de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+    *Acesse em `http://localhost:8081` (ou a porta disponível indicada pelo Vite).*
+
+---
+
+<p align="center">
+  Construído com foco em precisão e entrega por <strong>Jônata Ribeiro</strong>.
+</p>

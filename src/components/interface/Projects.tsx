@@ -63,14 +63,14 @@ export const Projects = () => {
                 ))}
               </div>
 
-              <div className="flex items-center gap-4">
+              {/* Botões de Ação com z-10 para garantir o clique */}
+              <div className="relative z-10 flex items-center gap-6">
                 {p.github && (
                   <a
                     href={p.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
-                    aria-label={`Ver código de ${p.title} no GitHub`}
                   >
                     <Github className="w-4 h-4" />
                     Código
@@ -80,9 +80,8 @@ export const Projects = () => {
                   <a
                     href={p.live}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors"
-                    aria-label={`Ver ${p.title} online`}
                   >
                     <ExternalLink className="w-4 h-4" />
                     Ver online

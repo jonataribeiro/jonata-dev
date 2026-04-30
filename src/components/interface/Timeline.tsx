@@ -46,7 +46,7 @@ export const Timeline = () => {
             className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border text-sm font-semibold hover:border-primary hover:text-primary hover:shadow-glow-sm transition-all"
           >
             <FileDown className="w-4 h-4" />
-            Baixar Currículo (PDF)
+            Baixar Currículo 📥 (PDF)
           </a>
         </motion.div>
 

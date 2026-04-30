@@ -31,7 +31,7 @@ export const WhatsAppFab = () => {
     >
       {/* Tooltip informativo que aparece no desktop */}
       <span className="absolute right-full mr-3 px-3 py-1.5 rounded-lg bg-card border border-border text-sm font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity shadow-card-elegant hidden sm:block">
-        Fale comigo no WhatsApp
+        Contate-me pelo WhatsApp.
       </span>
 
       {/* Efeito visual de pulso (ping) para chamar atenção */}

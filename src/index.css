@@ -323,7 +323,7 @@
       transform: translateY(0px); /*Posição original*/
     }
     50% {
-      transform: translateY(-12px); /*Sobe 12 pixels*/
+      transform: translateY(-25px); /*Sobe 12 pixels*/
     }
     100% {
       transform: translateY(0px); /*Volta à posição original*/
@@ -350,9 +350,9 @@
       hsl(var(--primary-glow) / 0.1) 30%,
       hsl(var(--primary-glow) / 0.3) 50%,
       hsl(var(--primary-glow) / 0.1) 70%,
-      transparent 100%
+      transparent 25%
     );
-    filter: blur(2px);
+    filter: blur(3px);
     animation: shine-image 3s ease-in-out infinite;
   }
 

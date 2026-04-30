@@ -1,3 +1,4 @@
+// src/components/interface/Hero.tsx
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
@@ -9,10 +10,12 @@ export const Hero = () => {
       id="top"
       className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
     >
-      <div className="absolute inset-0 grid-bg" aria-hidden />
-      <div className="absolute inset-0 bg-hero-glow" aria-hidden />
+      {/* Background Decorativo */}
+      <div className="absolute inset-0 grid-bg" aria-hidden="true" />
+      <div className="absolute inset-0 bg-hero-glow" aria-hidden="true" />
 
       <div className="container relative z-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        {/* Lado Esquerdo: Textos e Botões */}
         <div className="lg:col-span-7 xl:col-span-8 order-2 lg:order-1">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -52,6 +55,7 @@ export const Hero = () => {
             {hero.description}
           </motion.p>
 
+          {/* Botões de Ação */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,12 +69,24 @@ export const Hero = () => {
               Ver projetos
               <ArrowDown className="w-4 h-4" />
             </a>
+
             <a
-              href="#contato"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border text-foreground font-semibold hover:border-primary hover:text-primary transition-all"
+              href={`https://wa.me/${site.whatsapp.number}?text=${encodeURIComponent(site.whatsapp.message)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border text-sm font-semibold hover:border-primary hover:text-primary hover:shadow-glow-sm transition-all"
             >
-              Vamos conversar
+              Vamos conversar?
             </a>
+
+            <a
+              href={site.resumeUrl}
+              download
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border text-sm font-semibold hover:border-primary hover:text-primary hover:shadow-glow-sm transition-all"
+            >
+              Currículo 📥 (PDF)
+            </a>
+
             <a
               href={`mailto:${site.email}`}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-muted-foreground font-medium hover:text-primary transition-all"
@@ -81,6 +97,7 @@ export const Hero = () => {
             </a>
           </motion.div>
 
+          {/* Redes Sociais */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -115,20 +132,22 @@ export const Hero = () => {
           </motion.div>
         </div>
 
+        {/* Lado Direito: Foto com Efeitos de Órbita */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2"
         >
-          {/* Adicionada a classe profile-wrapper para a flutuação */}
-          <div className="relative profile-wrapper">
+          <div className="relative">
+            {/* Halo violeta pulsante */}
             <div
-              aria-hidden
+              aria-hidden="true"
               className="absolute -inset-10 rounded-full bg-primary/35 blur-3xl orbit-pulse"
             />
+            {/* Anel gradient rotativo */}
             <div
-              aria-hidden
+              aria-hidden="true"
               className="absolute -inset-3 rounded-full opacity-70 orbit-spin"
               style={{
                 background:
@@ -136,16 +155,20 @@ export const Hero = () => {
                 filter: "blur(8px)",
               }}
             />
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant">
+            {/* Moldura da Foto */}
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant bg-card">
               <img
                 src={avatar}
                 alt={`Foto de ${site.name}`}
                 width={768}
                 height={768}
+                loading="eager"
                 className="w-full h-full object-cover object-top scale-105"
               />
-              <div className="image-shine" aria-hidden />
+              <div className="image-shine" aria-hidden="true" />
             </div>
+
+            {/* Badge de Disponibilidade */}
             {site.available && (
               <div className="absolute -bottom-2 -right-2 bg-card border border-border rounded-full px-4 py-2 font-mono text-xs flex items-center gap-2 shadow-card-elegant">
                 <span className="relative flex h-2 w-2">
