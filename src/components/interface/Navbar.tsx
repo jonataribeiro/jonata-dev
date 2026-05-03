@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageSquare } from "lucide-react";
 import { site } from "@/config/site";
 
 const links = [
@@ -22,92 +22,104 @@ export const Navbar = () => {
   }, []);
 
   const handleNavClick = () => setOpen(false);
+  const whatsappUrl = `https://wa.me/${site.whatsapp.number}?text=${encodeURIComponent(site.whatsapp.message)}`;
 
   return (
     <motion.header
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/60 backdrop-blur-md border-b border-white/5 py-3"
+          : "bg-transparent py-5"
       }`}
     >
-      <nav className="container flex items-center justify-between py-4">
+      <nav className="container flex items-center justify-between">
+        {/* Logo e Nome do Site — Retornado ao padrão original jonataribeiro.dev */}
         <a
           href="#top"
-          className="font-display font-bold text-lg tracking-tight logo-neon"
+          className="flex items-center gap-6 group"
           aria-label={`Ir para o topo — ${site.domain}`}
         >
-          <span className="text-foreground">jonataribeiro</span>
-          <span className="text-primary">.dev</span>
+          <div className="relative w-10 h-10 p-[2px] overflow-hidden rounded-xl bg-gradient-to-br from-primary/50 to-transparent border border-white/10 group-hover:border-primary/50 transition-all duration-500">
+            <img 
+              src="/fivecon-logo.png" 
+              alt="Logo" 
+              className="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-all duration-500" 
+            />
+          </div>
+          
+          {/* Nome do site em linha única como era antes */}
+          <span className="font-display font-bold text-lg tracking-tighter text-white">
+            jonataribeiro<span className="text-primary">.dev</span>
+          </span>
         </a>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <li key={l.href}>
+            <li key={l.href} className="relative group">
               <a
                 href={l.href}
-                className="nav-neon text-muted-foreground hover:text-primary transition-colors"
+                className="text-xs uppercase tracking-widest font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 {l.label}
               </a>
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full" />
             </li>
           ))}
         </ul>
 
-        {/* Desktop CTA Button - CORRIGIDO */}
+        {/* Botão Contate-me */}
         <a
-          href="https://wa.me/5511974726780?text=Jônata,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
+          className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-500 shadow-lg shadow-primary/5 hover:shadow-primary/20"
         >
-          <span>💬</span> Contate-me
+          <MessageSquare className="w-3.5 h-3.5" />
+          Contate-me
         </a>
 
         {/* Mobile Toggle */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
+          className="md:hidden p-2 text-foreground"
         >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
-            className="md:hidden overflow-hidden border-t border-border bg-background/95 backdrop-blur-xl"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 right-0 border-t border-white/5 bg-background/95 backdrop-blur-2xl shadow-2xl md:hidden"
           >
-            <ul className="container py-6 flex flex-col gap-1">
+            <ul className="container py-8 flex flex-col gap-4">
               {links.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
                     onClick={handleNavClick}
-                    className="nav-neon block px-3 py-3 rounded-lg text-base font-medium text-muted-foreground hover:bg-muted"
+                    className="text-lg font-display font-medium text-muted-foreground hover:text-primary flex items-center justify-between group"
                   >
                     {l.label}
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">→</span>
                   </a>
                 </li>
               ))}
-              <li className="mt-4">
+              <li className="pt-4 border-t border-white/5">
                 <a
-                  href="https://wa.me/5511974726780?text=Jônata,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade."
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-neon inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold w-full"
+                  className="flex items-center justify-center gap-3 py-4 rounded-2xl bg-primary text-white font-bold uppercase tracking-widest text-xs"
                   onClick={handleNavClick}
                 >
                   Vamos conversar?

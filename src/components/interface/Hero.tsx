@@ -1,6 +1,6 @@
 // src/components/interface/Hero.tsx
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, FileDown, Github, Linkedin, Mail } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 import { site, hero } from "@/config/site";
 
@@ -84,7 +84,8 @@ export const Hero = () => {
               download
               className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border text-sm font-semibold hover:border-primary hover:text-primary hover:shadow-glow-sm transition-all"
             >
-              Currículo 📥 (PDF)
+              <FileDown className="w-5 h-5 shrink-0" />
+              Baixar Currículo PDF
             </a>
 
             <a

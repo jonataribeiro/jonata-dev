@@ -1,12 +1,14 @@
 import { ReactNode } from "react";
 import { Navbar } from "@/components/interface/Navbar";
-import { Footer } from "@/components/interface/Contact";
-import { WhatsAppFab } from "@/components/interface/WhatsAppFab";
+import { Footer } from "@/components/interface/Contact"; 
+import { WhatsAppFab } from "@/components/interface/WhatsAvatar";
 
+// Use "export const" para garantir que seja um export nomeado
 export const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main className="relative min-h-screen bg-background text-foreground overflow-x-hidden bg-noise">
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        {/* Orbs mantidas conforme seu projeto original */}
         <div className="bg-orb bg-orb-primary w-[520px] h-[520px] -top-40 -left-40" />
         <div className="bg-orb bg-orb-accent w-[420px] h-[420px] top-[30%] -right-32" />
         <div className="bg-orb bg-orb-deep w-[460px] h-[460px] top-[65%] -left-24" />
@@ -15,9 +17,7 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
       </div>
 
       <Navbar />
-      <div className="relative z-10">
-        {children}
-      </div>
+      <div className="relative z-10">{children}</div>
       <Footer />
       <WhatsAppFab />
     </main>

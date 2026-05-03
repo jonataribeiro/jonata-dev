@@ -208,21 +208,37 @@
   @keyframes shine-sweep { 0% { background-position: -200% 0; } 60% { background-position: 200% 0; } 100% { background-position: 200% 0; } }
 }
 
+/* Versão com intensidade reduzida para o jonataribeiro.dev */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url('/back-tech.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  /* 1. Opacidade reduzida para um visual mais sutil */
+  opacity: 0.12; 
+  
+  /* 2. Filtros suavizados para as linhas não ficarem tão "acesas" */
+  filter: brightness(0.9) contrast(1.1);
 
-  .grid-bg {
-    background-image:
-      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black, transparent);
-  }
-
-  .border-gradient {
-    border: 1px solid transparent;
-    background:
-      linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
-      var(--gradient-border) border-box;
-  }
+  /* 3. Máscara radial mais longa para as bordas sumirem gradualmente */
+  mask-image: radial-gradient(
+    circle at 50% 50%, 
+    black 30%, 
+    rgba(0, 0, 0, 0.4) 70%, 
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%, 
+    black 30%, 
+    rgba(0, 0, 0, 0.4) 70%, 
+    transparent 100%
+  );
+  
+  pointer-events: none;
+}
 
   /* ─── Neon menu: brilho sutil no hover + link ativo ─── */
   .nav-neon {
