@@ -1,4 +1,4 @@
-# 🚀 JonataRibeiro.dev — Full-Stack Architecture & Process Engineering
+# 🚀 jonataribeiro.tech — Full-Stack Architecture & Process Engineering
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
@@ -16,7 +16,7 @@ Este repositório armazena o *core* do meu portfólio profissional. Mais do que 
 
 O design foi concebido sob a filosofia *Dark-First*, priorizando contraste e legibilidade técnica, sendo totalmente otimizado para hardware de alta fidelidade como o **Samsung Book**.
 
-**🌐 URL Oficial:** [jonataribeiro.dev](https://jonataribeiro.dev)
+**🌐 URL Oficial:** [jonataribeiro.tech](https://jonataribeiro.tech)
 
 ---
 

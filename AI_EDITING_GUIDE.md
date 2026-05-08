@@ -9,7 +9,7 @@
 - **Quem:** Jônata Emerson da Silva Ribeiro — servidor público em transição de carreira para Desenvolvimento Full-Stack.
 - **Objetivo do site:** vitrine profissional para conquistar a **primeira oportunidade** no mercado de tecnologia.
 - **Tom:** profissional, maduro, direto. A trajetória no serviço público é apresentada como **diferencial analítico**, não como desvio de carreira.
-- **Domínio:** `jonataribeiro.dev`
+- **Domínio:** `jonataribeiro.tech`
 
 ## 🛠️ Stack técnica
 
