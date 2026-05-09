@@ -96,7 +96,7 @@ export const Footer = () => {
                 className="w-7 h-7 object-contain group-hover:scale-110 transition-transform" 
               />
               <span className="font-display font-bold text-lg tracking-tighter text-white">
-                jonataribeiro<span className="text-primary">.dev</span>
+                jonataribeiro<span className="text-primary">.tech</span>
               </span>
             </a>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
@@ -147,7 +147,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-3 text-sm text-zinc-400">
                <div className="flex items-center gap-3">
                   <MapPin className="w-4 h-4 text-primary shrink-0" />
-                  João Pessoa, PB
+                  São Paulo - SP
                </div>
                <a href={`mailto:${site.email}`} className="flex items-center gap-3 hover:text-primary transition-colors">
                   <Mail className="w-4 h-4 text-primary shrink-0" />

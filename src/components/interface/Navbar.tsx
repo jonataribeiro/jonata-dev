@@ -52,7 +52,7 @@ export const Navbar = () => {
           
           {/* Nome do site em linha única como era antes */}
           <span className="font-display font-bold text-lg tracking-tighter text-white">
-            jonataribeiro<span className="text-primary">.dev</span>
+            jonataribeiro<span className="text-primary">.tech</span>
           </span>
         </a>
 
