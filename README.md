@@ -1,75 +1,90 @@
-# 🚀 jonataribeiro.tech — Full-Stack Architecture & Process Engineering
+🚀 Jônata Ribeiro — Engenharia de Software & Arquitetura Full-Stack
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" />
 </div>
 
 ---
 
 ## 📌 Visão Estratégica
 
-Este repositório armazena o *core* do meu portfólio profissional. Mais do que uma vitrine, esta plataforma é um laboratório de engenharia onde aplico a **precisão da gestão pública** e a **otimização de fluxos** na construção de interfaces escaláveis e de alta performance.
+Este repositório armazena o **core engine** do meu portfólio profissional. Mais do que uma vitrine, esta plataforma é um laboratório de engenharia onde aplico a **precisão da gestão pública** e a **otimização de fluxos** na construção de interfaces escaláveis e de alta performance.
 
-O design foi concebido sob a filosofia *Dark-First*, priorizando contraste e legibilidade técnica, sendo totalmente otimizado para hardware de alta fidelidade como o **Samsung Book**.
+O design foi concebido sob a filosofia *Dark-First* e *Bento Grid Layout*, priorizando contraste e legibilidade técnica. O ecossistema é totalmente otimizado para hardware de alta fidelidade e telas de alta taxa de atualização.
 
-**🌐 URL Oficial:** [jonataribeiro.tech](https://jonataribeiro.tech)
+**🌐 URL Oficial:** [jonataribeiro.dev](https://jonataribeiro.dev)
+
+---
+
+## 🕒 Updates Recentes (Maio 2026)
+
+Nos últimos dias, o projeto passou por uma reestruturação crítica focada em **branding e UX**:
+
+* **Migração de Domínio:** Transição completa para `jonataribeiro.dev`, configurando DNS e SSL via Cloudflare.
+* **Redesign do Contact Layer:** Implementação de layout *Bento Grid* para melhor hierarquia de informações e CTAs.
+* **Infraestrutura de E-mail:** Configuração de aliases profissionais (`contato@jonataribeiro.tech`) com redirecionamento estratégico.
+* **Refining Visual:** Ajuste de tokens de cor HSL para garantir a estética *Violet Glow* consistente em todos os componentes.
+* **Otimização de Assets:** Implementação de carregamento otimizado para imagens e currículo PDF.
 
 ---
 
 ## 🛠️ Stack Tecnológica de Elite
 
-O ecossistema foi selecionado para garantir **estabilidade** e **velocidade de entrega**:
-
-*   **Core:** **React 18** e **TypeScript** para desenvolvimento estritamente tipado.
-*   **Styling:** **Tailwind CSS** com implementação de *Glassmorphism* avançado e design responsivo.
-*   **Motion:** **Framer Motion** para micro-interações fluidas e profundidade dinâmica.
-*   **Tooling:** **Vite** para builds ultrarrápidos e **Lucide React** para iconografia consistente.
+* **Frontend Core:** **React 18** com **TypeScript 5** (Strict Mode).
+* **Styling & UI:** **Tailwind CSS** com implementação de *Glassmorphism* e design responsivo.
+* **Motion Engineering:** **Framer Motion** para micro-interações fluidas e profundidade dinâmica.
+* **Database Expertise:** Consultas complexas e modelagem em **SQL Server, Oracle XE e MySQL**.
+* **Infrastructure:** Pipeline de deploy contínuo via **GitHub Actions** e Edge Computing na **Cloudflare**.
 
 ---
 
-## 📐 Arquitetura do Ecossistema
+## 📐 Arquitetura do Projeto
 
-O projeto segue uma organização modular para facilitar a escalabilidade e manutenção:
-
-*   `src/components/interface/`: Componentes de UI modulares (Hero, About, Stack).
-*   `src/config/site.ts`: **Single Source of Truth (SSoT)** para metadados e configurações globais.
-*   `src/types/portfolio.ts`: Definições de contratos e interfaces para integridade de dados.
-*   `src/styles/`: Customização de tokens do Tailwind e animações globais.
+* `src/components/portfolio/`: Seções modulares (Hero, Bento Contact, Stack).
+* `src/components/ui/`: Componentes atômicos baseados em **shadcn/ui**.
+* `src/config/site.ts`: **Single Source of Truth (SSoT)** — onde todo o conteúdo é gerenciado.
+* `src/index.css`: Design System centralizado via CSS Variables.
 
 ---
 
 ## 👨‍💻 Perfil Técnico
 
-Baseado em **João Pessoa, Paraíba**, sou **Jônata Emerson da Silva Ribeiro**. Minha trajetória é marcada pela resolução de problemas sob pressão e pela transição estratégica da gestão pública para a **Engenharia de Software Full-Stack**.
+Baseado em **João Pessoa, Paraíba**, sou **Jônata Emerson da Silva Ribeiro**. Minha trajetória integra a resiliência e o rigor analítico do serviço público com a agilidade estratégica do **Desenvolvimento Full-Stack**.
 
-### **Expertise Principal:**
-*   **Full-Stack Development:** Ecossistema moderno focado em **React, TypeScript e Node.js**.
-*   **Data Management:** Modelagem e gestão em **SQL Server, Oracle e MySQL**.
-*   **Metodologias:** Clean Code, Git Flow e Arquitetura de Software Robusta.
+### **Expertise de Domínio:**
+* **Software Development:** Ecossistema focado em **React, TypeScript e Node.js**.
+* **Data Management:** Modelagem, normalização e gestão de bancos de dados relacionais.
+* **Process Engineering:** Automação de fluxos, Clean Code e Git Flow.
 
 ---
 
 ## 🚀 Guia de Execução
 
-1.  **Clone o repositório e instale as dependências:**
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/jonataribeiro/portfolio.git](https://github.com/jonataribeiro/portfolio.git)
+    ```
+
+2.  **Instale as dependências:**
     ```bash
     npm install
     ```
 
-2.  **Inicie o ambiente de desenvolvimento:**
+3.  **Inicie o ambiente de desenvolvimento:**
     ```bash
     npm run dev
     ```
-    *Ambiente disponível por padrão em `http://localhost:5173`.*
 
 ---
 
 <div align="center">
   <p><b>"Transformando processos complexos em código elegante."</b></p>
-  <p>Construído com foco em precisão por <b>Jônata Ribeiro</b>.</p>
+  <p>Construído com foco em performance e precisão por <b>Jônata Ribeiro</b>.</p>
   <p>© 2026 — João Pessoa/PB</p>
 </div>

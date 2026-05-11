@@ -36,7 +36,7 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container flex items-center justify-between">
-        {/* Logo e Nome do Site — Retornado ao padrão original jonataribeiro.tech */}
+        {/* Logo e Nome do Site — Retornado ao padrão original jonataribeiro.dev */}
         <a
           href="#top"
           className="flex items-center gap-6 group"
@@ -52,7 +52,7 @@ export const Navbar = () => {
           
           {/* Nome do site em linha única como era antes */}
           <span className="font-display font-bold text-lg tracking-tighter text-white">
-            jonataribeiro<span className="text-primary">.tech</span>
+            jonataribeiro<span className="text-primary">.dev</span>
           </span>
         </a>
 

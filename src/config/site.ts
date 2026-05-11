@@ -11,15 +11,15 @@ export const site: SiteConfig = {
   name: "Jônata Ribeiro",
   fullName: "Jônata Emerson da Silva Ribeiro",
   role: "Desenvolvedor Full-Stack em formação",
-  domain: "jonataribeiro.tech",
-  email: "jonataribeiro.tech@gmail.com",
-  emailAlt: "jonata.dev@hotmail.com",
+  domain: "jonataribeiro.dev",
+  email: "contato@jonataribeiro.dev",
+  emailAlt: "contato@jonataribeiro.tech",
   phone: "+55 11 97472-6780",
-  location: "João Pessoa, Paraíba — Brasil",
+  location: "São Paulo - PB — Brasil",
   available: true,
   whatsapp: {
     number: "5511974726780",
-    message: "Olá, Jônata! Vi seu portfólio em jonataribeiro.tech e gostaria de conversar sobre uma oportunidade profissional.",
+    message: "Olá, Jônata! Vi seu portfólio em jonataribeiro.dev e gostaria de conversar sobre uma oportunidade profissional.",
   },
   social: {
     github: "https://github.com/jonataribeiro",
@@ -71,7 +71,7 @@ export const timeline: readonly TimelineItem[] = [
     type: "experience",
     period: "2024 — Atual",
     title: "Analista de Sistemas | Desenvolvimento Full-Stack",
-    org: "Projeto pessoal — jonataribeiro.tech",
+    org: "Projeto pessoal — jonataribeiro.dev",
     description: "Construção deste portfólio como ambiente real de testes para arquitetura escalável. Foco total em arquitetura de software, padrões de projeto e Clean Code",
   },
   {
@@ -99,9 +99,9 @@ export const timeline: readonly TimelineItem[] = [
 
 export const projects: readonly Project[] = [
   {
-    title: "Portfólio Profissional — jonataribeiro.tech",
+    title: "Portfólio Profissional — jonataribeiro.dev",
     description: "Site-Portfólio Profissional construído e personalizado do zero com React, TypeScript, Tailwind e Framer Motion. Foco em performance e acessibilidade.",
-    tags: ["React", "VS Code", "TypeScript", "Tailwind", "Framer Motion"],
+    tags: ["React", "VS Code", "TypeScript", "Tailwind", "Cloudflare", "Framer Motion"],
     github: "https://github.com/jonataribeiro/meu-portfolio",
     live: "https://www.linkedin.com/in/jonataribeiro",
     featured: true,

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, ArrowUpRight, Phone, MapPin, MessageCircle, FileDown } from "lucide-react";
+import { Mail, Github, Linkedin, ArrowUpRight, MapPin, MessageCircle, FileDown } from "lucide-react";
 import { site } from "@/config/site";
 
 export const Contact = () => {
@@ -51,6 +51,7 @@ export const Contact = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-3 mt-8 text-left">
+            {/* E-mail Principal */}
             <a href={`mailto:${site.email}`} className="group flex items-center gap-3 p-4 rounded-xl border border-border bg-card-gradient hover:border-primary/50 transition-colors">
               <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                 <Mail className="w-5 h-5 text-primary" />
@@ -61,13 +62,14 @@ export const Contact = () => {
               </div>
             </a>
 
-            <a href={`tel:${site.phone.replace(/\D/g, "")}`} className="group flex items-center gap-3 p-4 rounded-xl border border-border bg-card-gradient hover:border-primary/50 transition-colors">
+            {/* E-mail Secundário (.tech) */}
+            <a href="mailto:contato@jonataribeiro.tech" className="group flex items-center gap-3 p-4 rounded-xl border border-border bg-card-gradient hover:border-primary/50 transition-colors">
               <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                <Phone className="w-5 h-5 text-primary" />
+                <Mail className="w-5 h-5 text-primary" />
               </div>
               <div className="min-w-0">
-                <p className="font-mono text-xs text-muted-foreground">Telefone</p>
-                <p className="font-medium text-sm group-hover:text-primary transition-colors">{site.phone}</p>
+                <p className="font-mono text-xs text-muted-foreground">E-mail secundário</p>
+                <p className="font-medium text-sm truncate group-hover:text-primary transition-colors">contato@jonataribeiro.tech</p>
               </div>
             </a>
           </div>
@@ -96,14 +98,14 @@ export const Footer = () => {
                 className="w-7 h-7 object-contain group-hover:scale-110 transition-transform" 
               />
               <span className="font-display font-bold text-lg tracking-tighter text-white">
-                jonataribeiro<span className="text-primary">.tech</span>
+                jonataribeiro<span className="text-primary">.dev</span>
               </span>
             </a>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
               Analista de Processos e Desenvolvedor Full-Stack focado em transformar desafios em soluções digitais robustas.
             </p>
             
-            {/* Logos GitHub e LinkedIn */}
+            {/* Redes Sociais */}
             <div className="flex items-center gap-5 pt-1">
               {site.social.github && (
                 <a 
@@ -141,17 +143,17 @@ export const Footer = () => {
             </nav>
           </div>
 
-          {/* Novos campos de Contato */}
+          {/* Campos de Contato */}
           <div className="space-y-3">
             <h4 className="font-display font-semibold text-[10px] uppercase tracking-[0.2em] text-primary">Contato</h4>
             <div className="flex flex-col gap-3 text-sm text-zinc-400">
                <div className="flex items-center gap-3">
                   <MapPin className="w-4 h-4 text-primary shrink-0" />
-                  São Paulo - SP
+                  João Pessoa - PB
                </div>
                <a href={`mailto:${site.email}`} className="flex items-center gap-3 hover:text-primary transition-colors">
                   <Mail className="w-4 h-4 text-primary shrink-0" />
-                  E-mail
+                  E-mail Principal
                </a>
                <a href={whatsappHref} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-emerald-500 transition-colors">
                   <MessageCircle className="w-4 h-4 text-primary shrink-0" />
@@ -167,7 +169,7 @@ export const Footer = () => {
             © {new Date().getFullYear()} — Jônata Emerson da Silva Ribeiro ©
           </div>
           <div className="flex items-center gap-2 text-[9px] text-zinc-500 font-mono uppercase tracking-tighter">
-          Construído e Personalizado com React, VS Code,TypeScript, Tailwind e Framer Motion.
+            Construído e Personalizado com React, VS Code,TypeScript, Tailwind, Cloudflare e Framer Motion.
           </div>
         </div>
       </div>

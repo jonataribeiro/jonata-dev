@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // Definindo a base como '/' para que os caminhos de JS, CSS e Imagens 
-  // funcionem corretamente no seu novo domínio jonataribeiro.tech
+  // funcionem corretamente no seu novo domínio jonataribeiro.dev
   base: "/", 
   
   server: {
