@@ -25,7 +25,7 @@ export const WhatsAppFab = () => {
     >
       {/* Tooltip Informativo */}
       <span className="absolute right-full mr-4 px-3 py-1.5 rounded-lg bg-card border border-border text-sm font-medium text-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity shadow-xl hidden sm:block">
-        Contate-me
+        Contate-me pelo WhatsApp
       </span>
 
       {/* Efeito de pulso discreto */}
