@@ -51,30 +51,24 @@ export const Contact = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-3 mt-8 text-left">
-            {/* E-mail Principal - Link Direto */}
-            <a 
-              href={`mailto:${site.email}`} 
-              className="group flex items-center gap-3 p-4 rounded-xl border border-border bg-card-gradient hover:border-primary/50 transition-colors"
-            >
-              <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                <Mail className="w-5 h-5 text-primary group-hover:text-inherit" />
+            {/* E-mail Principal */}
+            <a href={`mailto:${site.email}`} className="group flex items-center gap-3 p-4 rounded-xl border border-border bg-card-gradient hover:border-primary/50 transition-colors">
+              <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <Mail className="w-5 h-5 text-primary" />
               </div>
-              <div className="min-w-0 overflow-hidden">
-                <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Main Inbox</p>
+              <div className="min-w-0">
+                <p className="font-mono text-xs text-muted-foreground">E-mail principal</p>
                 <p className="font-medium text-sm truncate group-hover:text-primary transition-colors">{site.email}</p>
               </div>
             </a>
 
-            {/* E-mail Secundário (.tech) - Link Direto */}
-            <a 
-              href="mailto:contato@jonataribeiro.tech" 
-              className="group flex items-center gap-3 p-4 rounded-xl border border-border bg-card-gradient hover:border-primary/50 transition-colors"
-            >
-              <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                <Mail className="w-5 h-5 text-primary group-hover:text-inherit" />
+            {/* E-mail Secundário (.tech) */}
+            <a href="mailto:contato@jonataribeiro.tech" className="group flex items-center gap-3 p-4 rounded-xl border border-border bg-card-gradient hover:border-primary/50 transition-colors">
+              <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <Mail className="w-5 h-5 text-primary" />
               </div>
-              <div className="min-w-0 overflow-hidden">
-                <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Secondary Alias</p>
+              <div className="min-w-0">
+                <p className="font-mono text-xs text-muted-foreground">E-mail secundário</p>
                 <p className="font-medium text-sm truncate group-hover:text-primary transition-colors">contato@jonataribeiro.tech</p>
               </div>
             </a>
@@ -95,8 +89,9 @@ export const Footer = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid gap-8 md:grid-cols-4 mb-10 text-left">
           
+          {/* Branding e Redes Sociais */}
           <div className="md:col-span-2 space-y-4">
-            <a href="#top" className="group flex items-center gap-4">
+            <a href="#top" className="group flex items-center gap-6">
               <img 
                 src="/fivecon-logo.png" 
                 alt="Logo" 
@@ -110,6 +105,7 @@ export const Footer = () => {
               Analista de Processos e Desenvolvedor Full-Stack focado em transformar desafios em soluções digitais robustas.
             </p>
             
+            {/* Redes Sociais */}
             <div className="flex items-center gap-5 pt-1">
               {site.social.github && (
                 <a 
@@ -136,6 +132,7 @@ export const Footer = () => {
             </div>
           </div>
 
+          {/* Navegação */}
           <div className="space-y-3">
             <h4 className="font-display font-semibold text-[10px] uppercase tracking-[0.2em] text-primary">Mapa</h4>
             <nav className="flex flex-col gap-2 text-sm">
@@ -146,6 +143,7 @@ export const Footer = () => {
             </nav>
           </div>
 
+          {/* Campos de Contato */}
           <div className="space-y-3">
             <h4 className="font-display font-semibold text-[10px] uppercase tracking-[0.2em] text-primary">Contato</h4>
             <div className="flex flex-col gap-3 text-sm text-zinc-400">
@@ -165,11 +163,12 @@ export const Footer = () => {
           </div>
         </div>
 
+        {/* Rodapé Final */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/5">
           <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-mono">
             © {new Date().getFullYear()} — Jônata Emerson da Silva Ribeiro ©
           </div>
-          <div className="flex items-center gap-2 text-[9px] text-zinc-500 font-mono uppercase tracking-tighter text-center sm:text-right">
+          <div className="flex items-center gap-2 text-[9px] text-zinc-500 font-mono uppercase tracking-tighter">
             Construído e Personalizado com React, VS Code,TypeScript, Tailwind, Cloudflare e Framer Motion.
           </div>
         </div>
