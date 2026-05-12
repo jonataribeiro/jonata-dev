@@ -88,14 +88,14 @@ export const Footer = () => {
 
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid gap-8 md:grid-cols-4 mb-10 text-left">
-          
+
           {/* Branding e Redes Sociais */}
           <div className="md:col-span-2 space-y-4">
             <a href="#top" className="group flex items-center gap-6">
-              <img 
-                src="/fivecon-logo.png" 
-                alt="Logo" 
-                className="w-7 h-7 object-contain group-hover:scale-110 transition-transform" 
+              <img
+                src="/fivecon-logo.png"
+                alt="Logo"
+                className="w-7 h-7 object-contain group-hover:scale-110 transition-transform"
               />
               <span className="font-display font-bold text-lg tracking-tighter text-white">
                 jonataribeiro<span className="text-primary">.dev</span>
@@ -104,14 +104,14 @@ export const Footer = () => {
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
               Analista de Processos e Desenvolvedor Full-Stack focado em transformar desafios em soluções digitais robustas.
             </p>
-            
+
             {/* Redes Sociais */}
             <div className="flex items-center gap-5 pt-1">
               {site.social.github && (
-                <a 
-                  href={site.social.github} 
-                  target="_blank" 
-                  rel="noreferrer" 
+                <a
+                  href={site.social.github}
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-zinc-500 hover:text-white transition-all hover:scale-110 duration-300"
                   aria-label="GitHub"
                 >
@@ -119,10 +119,10 @@ export const Footer = () => {
                 </a>
               )}
               {site.social.linkedin && (
-                <a 
-                  href={site.social.linkedin} 
-                  target="_blank" 
-                  rel="noreferrer" 
+                <a
+                  href={site.social.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-zinc-500 hover:text-[#0A66C2] transition-all hover:scale-110 duration-300"
                   aria-label="LinkedIn"
                 >
@@ -139,6 +139,7 @@ export const Footer = () => {
               <a href="#sobre" className="text-zinc-400 hover:text-primary transition-colors">Sobre</a>
               <a href="#stack" className="text-zinc-400 hover:text-primary transition-colors">Stack</a>
               <a href="#projetos" className="text-zinc-400 hover:text-primary transition-colors">Projetos</a>
+              <a href="#projetos" className="text-zinc-400 hover:text-primary transition-colors">Trajetória</a>
               <a href={site.resumeUrl} download className="text-zinc-400 hover:text-primary transition-colors">Currículo</a>
             </nav>
           </div>
@@ -147,19 +148,27 @@ export const Footer = () => {
           <div className="space-y-3">
             <h4 className="font-display font-semibold text-[10px] uppercase tracking-[0.2em] text-primary">Contato</h4>
             <div className="flex flex-col gap-3 text-sm text-zinc-400">
-               <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-primary shrink-0" />
-                  São Paulo - SP
-               </div>
-               <a href={`mailto:${site.email}`} className="flex items-center gap-3 hover:text-primary transition-colors">
-                  <Mail className="w-4 h-4 text-primary shrink-0" />
-                  E-mail Principal
-               </a>
-               <a href={whatsappHref} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-emerald-500 transition-colors">
-                  <MessageCircle className="w-4 h-4 text-primary shrink-0" />
-                  WhatsApp
-               </a>
-            </div> 
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-primary shrink-0" />
+                São Paulo - SP
+              </div>
+
+              <a
+                href={`mailto:${site.email}`}
+                className="relative z-30 flex items-center gap-3 hover:text-primary transition-colors cursor-pointer"
+              >
+                <Mail className="w-4 h-4 text-primary shrink-0" />
+                contato@jonataribeiro.dev
+              </a>
+              <a href={`mailto:${site.email}`} className="flex items-center gap-3 hover:text-primary transition-colors">
+                <Mail className="w-4 h-4 text-primary shrink-0" />
+                contato@jonataribeiro.tech
+              </a>
+              <a href={whatsappHref} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-emerald-500 transition-colors">
+                <MessageCircle className="w-4 h-4 text-primary shrink-0" />
+                WhatsApp
+              </a>
+            </div>
           </div>
         </div>
 

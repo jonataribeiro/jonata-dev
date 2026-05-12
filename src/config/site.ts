@@ -15,7 +15,7 @@ export const site: SiteConfig = {
   email: "contato@jonataribeiro.dev",
   emailAlt: "contato@jonataribeiro.tech",
   phone: "+55 11 97472-6780",
-  location: "São Paulo - PB — Brasil",
+  location: "São Paulo — Brasil",
   available: true,
   whatsapp: {
     number: "5511974726780",
@@ -101,7 +101,7 @@ export const projects: readonly Project[] = [
   {
     title: "Portfólio Profissional — jonataribeiro.dev",
     description: "Site-Portfólio Profissional construído e personalizado do zero com React, TypeScript, Tailwind e Framer Motion. Foco em performance e acessibilidade.",
-    tags: ["React", "VS Code", "TypeScript", "Tailwind", "Cloudflare", "Framer Motion"],
+    tags: ["React", "VS Code", "TypeScript", "Tailwind", "Framer Motion"],
     github: "https://github.com/jonataribeiro/meu-portfolio",
     live: "https://www.linkedin.com/in/jonataribeiro",
     featured: true,
