@@ -159,7 +159,7 @@ export const Footer = () => {
                   <MessageCircle className="w-4 h-4 text-primary shrink-0" />
                   WhatsApp
                </a>
-            </div>
+            </div> 
           </div>
         </div>
 
