@@ -158,11 +158,11 @@ export const Hero = () => {
 
 
             {/* Moldura da Foto */}
-            
+
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant bg-card">
               <img
-                src="/imagem-perfil.jpg" // Caminho exato para o arquivo na raiz da pasta public
-                alt={`Foto de ${site.name}`}
+                src="/design/img-perfil.jpg"
+                alt="Jônata Ribeiro"
                 width={768}
                 height={768}
                 loading="eager"
