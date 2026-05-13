@@ -1,7 +1,6 @@
 // src/components/interface/Hero.tsx
 import { motion } from "framer-motion";
 import { ArrowDown, FileDown, Github, Linkedin, Mail } from "lucide-react";
-import avatar from "@/assets/avatar.jpg";
 import { site, hero } from "@/config/site";
 
 export const Hero = () => {
@@ -156,10 +155,13 @@ export const Hero = () => {
                 filter: "blur(8px)",
               }}
             />
+
+
             {/* Moldura da Foto */}
+            
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-elegant bg-card">
               <img
-                src={avatar}
+                src="/imagem-perfil.jpg" // Caminho exato para o arquivo na raiz da pasta public
                 alt={`Foto de ${site.name}`}
                 width={768}
                 height={768}

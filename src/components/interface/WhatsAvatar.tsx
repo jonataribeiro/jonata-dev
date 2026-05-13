@@ -37,7 +37,7 @@ export const WhatsAppFab = () => {
       {/* Container da Foto */}
       <div className="relative w-full h-full flex items-center justify-center z-20 rounded-full overflow-hidden">
         <img 
-          src="/chat-avatar.png" 
+          src="/chat-avatar.jpg" 
           alt="Jônata Ribeiro" 
           // Scale reduzido de 125/110 para 0.9 (90%) para dar recuo ao rosto
           className="w-full h-full object-cover scale-[0.9] origin-center"

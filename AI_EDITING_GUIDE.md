@@ -29,7 +29,7 @@ Scripts: `npm run dev`, `npm run build`, `npm run lint`, `npm run test`.
 
 ```
 src/
-├── assets/               # Imagens (avatar.jpg)
+├── assets/               # Imagens (avatar.png)
 ├── components/
 │   ├── portfolio/        # ⭐ Seções do site — EDITE AQUI
 │   │   ├── Navbar.tsx
@@ -140,7 +140,7 @@ npm run lint         # checagem de lint
 ## ✅ Checklist antes de fazer deploy
 
 - [ ] Trocou `public/curriculo.pdf` pelo PDF real
-- [ ] Trocou `src/assets/avatar.jpg` pela foto definitiva (1:1, boa iluminação)
+- [ ] Trocou `src/assets/avatar.png` pela foto definitiva (1:1, boa iluminação)
 - [ ] Revisou textos em `src/config/site.ts`
 - [ ] Atualizou `index.html` (title, description, og:image)
 - [ ] Rodou `npm run build` sem erros
