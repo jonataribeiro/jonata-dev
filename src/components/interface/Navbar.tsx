@@ -1,6 +1,7 @@
+// src/components/interface/Navbar.tsx
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, MessageSquare } from "lucide-react";
+import { Menu, X, MessageSquare, FileDown } from "lucide-react";
 import { site } from "@/config/site";
 
 const links = [
@@ -36,7 +37,7 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container flex items-center justify-between">
-        {/* Logo e Nome do Site — Retornado ao padrão original jonataribeiro.dev */}
+        {/* Logo e Nome do Site */}
         <a
           href="#top"
           className="flex items-center gap-6 group"
@@ -50,7 +51,6 @@ export const Navbar = () => {
             />
           </div>
           
-          {/* Nome do site em linha única como era antes */}
           <span className="font-display font-bold text-lg tracking-tighter text-white">
             jonataribeiro<span className="text-primary">.dev</span>
           </span>
@@ -71,16 +71,30 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        {/* Botão Contate-me */}
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-500 shadow-lg shadow-primary/5 hover:shadow-primary/20"
-        >
-          <MessageSquare className="w-3.5 h-3.5" />
-          Contate-me
-        </a>
+        {/* Desktop Actions */}
+        <div className="hidden md:flex items-center gap-4">
+          {/* Acesso rápido ao CV no Desktop - Ajustado para PDF */}
+          <a
+            href={site.resumeUrl}
+            download="Curriculo_Jonata_Ribeiro.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2.5 rounded-full border border-white/10 text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+            title="Baixar Currículo PDF"
+          >
+            <FileDown className="w-4 h-4" />
+          </a>
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-500 shadow-lg shadow-primary/5 hover:shadow-primary/20"
+          >
+            <MessageSquare className="w-3.5 h-3.5" />
+            Contate-me
+          </a>
+        </div>
 
         {/* Mobile Toggle */}
         <button
@@ -114,7 +128,20 @@ export const Navbar = () => {
                   </a>
                 </li>
               ))}
-              <li className="pt-4 border-t border-white/5">
+              <li className="pt-4 border-t border-white/5 flex flex-col gap-3">
+                {/* Download CV no Mobile - Ajustado para PDF */}
+                <a
+                  href={site.resumeUrl}
+                  download="Curriculo_Jonata_Ribeiro.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3 py-4 rounded-2xl border border-primary/20 text-primary font-bold uppercase tracking-widest text-xs"
+                  onClick={handleNavClick}
+                >
+                  <FileDown className="w-4 h-4" />
+                  Baixar Currículo PDF
+                </a>
+                
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -122,6 +149,7 @@ export const Navbar = () => {
                   className="flex items-center justify-center gap-3 py-4 rounded-2xl bg-primary text-white font-bold uppercase tracking-widest text-xs"
                   onClick={handleNavClick}
                 >
+                  <MessageSquare className="w-4 h-4" />
                   Vamos conversar?
                 </a>
               </li>

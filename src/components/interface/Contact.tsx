@@ -40,13 +40,16 @@ export const Contact = () => {
               <ArrowUpRight className="w-5 h-5 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
 
+            {/* BOTÃO CORRIGIDO AQUI */}
             <a
               href={site.resumeUrl}
-              download
+              download="Curriculo_Jonata_Ribeiro.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 px-6 sm:px-8 py-4 rounded-full border-2 border-primary/60 text-foreground font-semibold text-base sm:text-lg hover:border-primary hover:text-primary hover:shadow-glow-sm transition-all"
             >
               <FileDown className="w-5 h-5 shrink-0" />
-              <span>Baixar Currículo</span>
+              <span>Baixar Currículo PDF</span>
             </a>
           </div>
 
@@ -139,11 +142,20 @@ export const Footer = () => {
               <a href="#sobre" className="text-zinc-400 hover:text-primary transition-colors">Sobre</a>
               <a href="#stack" className="text-zinc-400 hover:text-primary transition-colors">Stack</a>
               <a href="#projetos" className="text-zinc-400 hover:text-primary transition-colors">Projetos</a>
-              <a href="#projetos" className="text-zinc-400 hover:text-primary transition-colors">Trajetória</a>
-              <a href={site.resumeUrl} download className="text-zinc-400 hover:text-primary transition-colors">Currículo</a>
+              <a href="#trajetoria" className="text-zinc-400 hover:text-primary transition-colors">Trajetória</a>
+
+              {/* LINK DO MAPA CORRIGIDO */}
+              <a
+                href={site.resumeUrl}
+                download="Curriculo_Jonata_Ribeiro.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-primary transition-colors"
+              >
+                Currículo PDF
+              </a>
             </nav>
           </div>
-
           {/* Campos de Contato */}
           <div className="space-y-3">
             <h4 className="font-display font-semibold text-[10px] uppercase tracking-[0.2em] text-primary">Contato</h4>
@@ -174,11 +186,11 @@ export const Footer = () => {
 
         {/* Rodapé Final */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/5">
-          <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-mono">
-            © {new Date().getFullYear()} — Jônata Emerson da Silva Ribeiro ©
+          <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-mono">
+            © {new Date().getFullYear()} Desenvolvimento | Jônata Emerson da Silva Ribeiro ©
           </div>
-          <div className="flex items-center gap-2 text-[9px] text-zinc-500 font-mono uppercase tracking-tighter">
-            Construído e Personalizado com React, VS Code,TypeScript, Tailwind, Cloudflare e Framer Motion.
+          <div className="flex items-center gap-2 text-[10px] text-zinc-400 font-mono uppercase tracking-tighter">
+            Construído e Personalizado com React, VS Code,TypeScript, Tailwind, Cloudflare/Security e Framer Motion.
           </div>
         </div>
       </div>

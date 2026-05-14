@@ -86,5 +86,5 @@ Baseado em **João Pessoa, Paraíba**, sou **Jônata Emerson da Silva Ribeiro**.
 <div align="center">
   <p><b>"Transformando processos complexos em código elegante."</b></p>
   <p>Construído com foco em performance e precisão por <b>Jônata Ribeiro</b>.</p>
-  <p>© 2026 — João Pessoa/PB</p>
+  <p>© 2026 — São Paulo - SP</p>
 </div>

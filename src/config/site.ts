@@ -52,7 +52,7 @@ export const stack: readonly StackCategory[] = [
   {
     title: "Backend — em uso",
     level: "uso",
-    items: ["Node.js", "Express", "REST APIs", "Docker"],
+    items: ["Node.js", "Cloudflare", "DNS/Security", "Express", "REST APIs", "Docker"],
   },
   {
     title: "Banco de Dados — SQL & Dados | Intermediário",
@@ -69,14 +69,14 @@ export const stack: readonly StackCategory[] = [
 export const timeline: readonly TimelineItem[] = [
   {
     type: "experience",
-    period: "2024 — Atual",
+    period: "2025 — Previsão Dezembro de 2026",
     title: "Analista de Sistemas | Desenvolvimento Full-Stack",
     org: "Projeto pessoal — jonataribeiro.dev",
     description: "Construção deste portfólio como ambiente real de testes para arquitetura escalável. Foco total em arquitetura de software, padrões de projeto e Clean Code",
   },
   {
     type: "education",
-    period: "2023 — Atual",
+    period: "2025 — Atual",
     title: "Estudos estruturados em Desenvolvedor Web e Analista de Sistemas",
     org: "Aprendizado contínuo",
     description: "Rotina diária dedicada a JavaScript, TypeScript, React, Node.js, SQL Server, Oracle Database, MySql e Python.",
@@ -100,8 +100,8 @@ export const timeline: readonly TimelineItem[] = [
 export const projects: readonly Project[] = [
   {
     title: "Portfólio Profissional — jonataribeiro.dev",
-    description: "Site-Portfólio Profissional construído e personalizado do zero com React, TypeScript, Tailwind e Framer Motion. Foco em performance e acessibilidade.",
-    tags: ["React", "VS Code", "TypeScript", "Tailwind", "Framer Motion"],
+    description: "Site-Portfólio Profissional construído e personalizado do zero com React, Cloudflare, TypeScript, Tailwind e Framer Motion. A infraestrutura é otimizada para performance e segurança através da Cloudflare (CDN/WAF), com domínio profissional gerenciado via Name.com e Get.tech. Foco total em Clean Code, alta performance e acessibilidade.",
+    tags: ["React", "VS Code", "TypeScript", "Tailwind", "Cloudflare", "DNS/Security", "Framer Motion"],
     github: "https://github.com/jonataribeiro/meu-portfolio",
     live: "https://www.linkedin.com/in/jonataribeiro",
     featured: true,

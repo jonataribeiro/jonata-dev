@@ -40,7 +40,7 @@ export const WhatsAppFab = () => {
           src="/public/design/chat-avatar.jpg" 
           alt="Jônata Ribeiro" 
           // Scale reduzido de 125/110 para 0.9 (90%) para dar recuo ao rosto
-          className="w-full h-full object-cover scale-[0.9] origin-center"
+          className="w-full h-full object-cover scale-[1.0] origin-center"
           onError={(e) => {
             e.currentTarget.src = "https://ui-avatars.com/api/?name=Jonata+Ribeiro&background=2563eb&color=fff";
           }}

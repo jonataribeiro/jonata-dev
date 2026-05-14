@@ -42,11 +42,13 @@ export const Timeline = () => {
           </div>
           <a
             href={site.resumeUrl}
-            download
+            download="Curriculo_Jonata_Ribeiro.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border text-sm font-semibold hover:border-primary hover:text-primary hover:shadow-glow-sm transition-all"
           >
             <FileDown className="w-5 h-5 shrink-0" />
-              <span>Baixar Currículo</span>
+            <span>Baixar Currículo PDF</span>
           </a>
         </motion.div>
 
