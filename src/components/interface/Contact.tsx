@@ -187,7 +187,7 @@ export const Footer = () => {
         {/* Rodapé Final */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/5">
           <div className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-mono">
-            © {new Date().getFullYear()} Desenvolvimento | Jônata Emerson da Silva Ribeiro ©
+            © {new Date().getFullYear()} | Jônata Emerson da Silva Ribeiro ©
           </div>
           <div className="flex items-center gap-2 text-[10px] text-zinc-400 font-mono uppercase tracking-tighter">
             Construído e Personalizado com React, VS Code,TypeScript, Tailwind, Cloudflare/Security e Framer Motion.
