@@ -1,4 +1,4 @@
-🚀 Jônata Ribeiro — Engenharia de Software & Arquitetura Full-Stack
+🚀 Jônata Ribeiro — Analista de Sistemas e Desenvolvedor Full-Stack
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
