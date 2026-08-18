@@ -9,7 +9,7 @@ export function Footer() {
   const contactLinks = [
     ...profile.social,
     ...(email ? [email] : []),
-    profile.whatsapp,
+    profile.web,
   ]
 
   return (

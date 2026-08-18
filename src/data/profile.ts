@@ -2,7 +2,7 @@ export type ContactChannel = {
   label: string
   value: string
   href: string
-  icon: 'github' | 'linkedin' | 'mail' | 'whatsapp'
+  icon: 'github' | 'linkedin' | 'mail' | 'whatsapp' | 'globe'
 }
 
 export const curriculoUrl = `${import.meta.env.BASE_URL}Curriculo_Jonata_Ribeiro.pdf`
@@ -43,6 +43,12 @@ export const profile = {
     value: '11974726780',
     href: 'https://wa.me/5511974726780?text=Ol%C3%A1%2C%20J%C3%B4nata!%20Vi%20seu%20portf%C3%B3lio%20em%20jonataribeiro.dev%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade%20profissional.',
     icon: 'whatsapp',
+  } as ContactChannel,
+  web: {
+    label: '@jonataribeiro.dev',
+    value: '@jonataribeiro.dev',
+    href: 'https://jonataribeiro.dev',
+    icon: 'globe',
   } as ContactChannel,
   channels: [
     {
