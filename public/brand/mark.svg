@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Símbolo JR — Jônata Ribeiro">
+  <!-- Caule central compartilhado (J + R) -->
+  <path d="M28.5,10 h5 v44 h-5 z" fill="#0B1711"/>
+  <!-- R: bojo superior -->
+  <path d="M33.5,10 H51 Q55,10 55,18 Q55,26 51,26 H33.5 Z" fill="#0B1711"/>
+  <!-- R: perna diagonal -->
+  <path d="M38.6,26.8 L43.4,25.2 L52.4,51.2 L47.6,52.8 Z" fill="#0B1711"/>
+  <!-- J: gancho inferior -->
+  <path d="M33.5,50 H13 Q9,50 9,52.5 Q9,55 13,55 H33.5 Z" fill="#0B1711"/>
+  <!-- Nó de dados (acento) -->
+  <path d="M50,51.5 L52,53.5 L50,55.5 L48,53.5 Z" fill="#7CFF4F"/>
+</svg>

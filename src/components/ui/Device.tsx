@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 type Scene = {
   id: string
@@ -122,44 +122,61 @@ export function Device() {
   const [revealPos, setRevealPos] = useState(0)
   const [terminalPos, setTerminalPos] = useState(0)
   const [explorerPos, setExplorerPos] = useState(0)
+  const [isVisible, setIsVisible] = useState(true)
+  const rootRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (prefersReducedMotion()) return
-    const sceneTimer = window.setInterval(() => {
-      setIndex((i) => (i + 1) % scenes.length)
-    }, 5000)
-    return () => window.clearInterval(sceneTimer)
+    const element = rootRef.current
+    if (!element || !("IntersectionObserver" in window)) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0 },
+    )
+    observer.observe(element)
+    return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
     if (prefersReducedMotion()) return
+    if (!isVisible) return
+    const sceneTimer = window.setInterval(() => {
+      setIndex((i) => (i + 1) % scenes.length)
+    }, 5000)
+    return () => window.clearInterval(sceneTimer)
+  }, [isVisible])
+
+  useEffect(() => {
+    if (prefersReducedMotion()) return
+    if (!isVisible) return
     const codeTimer = window.setInterval(() => {
       if (revealPos < scenes[index].codeLines.length - 1) {
         setRevealPos((r) => r + 1)
       }
     }, 60)
     return () => window.clearInterval(codeTimer)
-  }, [index])
+  }, [index, isVisible])
 
   useEffect(() => {
     if (prefersReducedMotion()) return
+    if (!isVisible) return
     const terminalTimer = window.setInterval(() => {
       if (terminalPos < scenes[index].terminalLines.length - 1) {
         setTerminalPos((r) => r + 1)
       }
     }, 700)
     return () => window.clearInterval(terminalTimer)
-  }, [index])
+  }, [index, isVisible])
 
   useEffect(() => {
     if (prefersReducedMotion()) return
+    if (!isVisible) return
     const explorerTimer = window.setInterval(() => {
       if (explorerPos < scenes[index].explorerFiles.length - 1) {
         setExplorerPos((r) => r + 1)
       }
     }, 800)
     return () => window.clearInterval(explorerTimer)
-  }, [index])
+  }, [index, isVisible])
 
   // Reset animation state when scene changes
   useEffect(() => {
@@ -171,7 +188,7 @@ export function Device() {
   const currentScene = scenes[index]
 
   return (
-    <div className="device" aria-hidden="true">
+    <div ref={rootRef} className="device" aria-hidden="true">
       <div className="device-glow" />
       <div className="device-body">
         <div className="device-screen">

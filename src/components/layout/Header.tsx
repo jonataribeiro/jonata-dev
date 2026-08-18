@@ -56,7 +56,12 @@ export function Header() {
     <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
       <div className="container header-inner">
         <a className="brand" href="#inicio" onClick={close}>
-          JÔNATA<span> RIBEIRO</span>
+          <img
+            src={`${import.meta.env.BASE_URL}brand/logo-dark.svg`}
+            alt="Jônata Ribeiro"
+            width={141}
+            height={30}
+          />
         </a>
         <button
           type="button"

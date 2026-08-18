@@ -17,8 +17,12 @@ export function Footer() {
       <div className="container footer-inner">
         <div className="footer-left">
           <p className="footer-brand">
-            {profile.firstName.toUpperCase()}
-            <span> {profile.lastName.toUpperCase()}</span>
+            <img
+              src={`${import.meta.env.BASE_URL}brand/logo-dark.svg`}
+              alt="Jônata Ribeiro"
+              width={103}
+              height={22}
+            />
           </p>
           <p className="footer-role">{profile.role}</p>
         </div>
