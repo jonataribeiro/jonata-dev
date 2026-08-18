@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartão de Visitas — Jônata Ribeiro</title>
+  <meta name="description" content="@jonataribeiro.dev • contato@jonataribeiro.dev • contato@jonataribeiro.tech • jonataribeiro.dev" />
+  <meta name="theme-color" content="#0a0e13" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Cartão de Visitas — Jônata Ribeiro" />
+  <meta property="og:description" content="@jonataribeiro.dev • Backend • Database • Data • AI — escaneie o QR para abrir meu cartão digital." />
+  <meta property="og:image" content="https://jonataribeiro.dev/cartao/cartao-jonataribeiro.png" />
+  <meta property="og:url" content="https://jonataribeiro.dev/cartao" />
+  <style>
+    :root {
+      --bg: #0a0e13;
+      --bg-card: #11161d;
+      --border: #1e2630;
+      --text: #e6edf3;
+      --muted: #93a1b0;
+      --neon: #7cff4f;
+      --neon-soft: rgba(124, 255, 79, 0.14);
+      --mono: "Consolas", "SFMono-Regular", Menlo, monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background:
+        radial-gradient(600px 400px at 85% -10%, rgba(124, 255, 79, 0.10), transparent 60%),
+        radial-gradient(500px 400px at -10% 110%, rgba(37, 217, 138, 0.08), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+    .card {
+      width: 100%;
+      max-width: 560px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(124, 255, 79, 0.04);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      background: radial-gradient(ellipse at 30% 0%, rgba(124, 255, 79, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+    .brand b { color: var(--neon); font-weight: 600; }
+    .mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--neon-soft);
+      border: 1px solid rgba(124, 255, 79, 0.35);
+      color: var(--neon);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: var(--mono);
+    }
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .role {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--neon);
+      margin: 6px 0 20px;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 0;
+      border-top: 1px solid var(--border);
+    }
+    .row:last-of-type { border-bottom: 1px solid var(--border); }
+    .row .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      width: 88px;
+      flex-shrink: 0;
+    }
+    .row .value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.15s ease;
+    }
+    .row a.value:hover { color: var(--neon); }
+    .row .handle { color: var(--neon); }
+    .qr-wrap {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .qr {
+      width: 168px;
+      height: 168px;
+      border-radius: 14px;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid var(--border);
+    }
+    .qr img { width: 100%; height: 100%; display: block; }
+    .qr-caption {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .qr-caption b { color: var(--neon); font-weight: 600; }
+    .cta {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn {
+      flex: 1;
+      min-width: 150px;
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .btn-primary {
+      background: var(--neon);
+      color: #0a0e13;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 22px rgba(124, 255, 79, 0.35);
+      transform: translateY(-1px);
+    }
+    .btn-ghost {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+    .btn-ghost:hover { border-color: rgba(124, 255, 79, 0.45); color: var(--neon); }
+    .foot {
+      margin-top: 22px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+    .foot a { color: var(--muted); text-decoration: none; }
+    .foot a:hover { color: var(--neon); }
+    @media (max-width: 420px) {
+      .card { padding: 20px; }
+      .row .label { width: 74px; }
+      .name { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand"><span class="mark">@</span> cartao.jonataribeiro<b>.dev</b></div>
+
+    <h1 class="name">Jônata Ribeiro</h1>
+    <p class="role">Backend • Database • Data • AI</p>
+
+    <div class="row">
+      <span class="label">WhatsApp</span>
+      <a class="value handle" href="https://jonataribeiro.dev" target="_blank" rel="noopener noreferrer">@jonataribeiro.dev</a>
+    </div>
+    <div class="row">
+      <span class="label">E-mail</span>
+      <a class="value" href="mailto:contato@jonataribeiro.dev">contato@jonataribeiro.dev</a>
+    </div>
+    <div class="row">
+      <span class="label">E-mail</span>
+      <a class="value" href="mailto:contato@jonataribeiro.tech">contato@jonataribeiro.tech</a>
+    </div>
+    <div class="row">
+      <span class="label">Portfólio</span>
+      <a class="value" href="https://jonataribeiro.dev" target="_blank" rel="noopener noreferrer">jonataribeiro.dev</a>
+    </div>
+
+    <div class="qr-wrap">
+      <div class="qr">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=4&qzone=2&data=https%3A%2F%2Fjonataribeiro.dev%2Fcartao"
+          alt="QR code — abre este cartão digital"
+          width="168" height="168"
+        />
+      </div>
+      <p class="qr-caption">Escaneie para abrir o cartão digital<br /><b>jonataribeiro.dev/cartao</b></p>
+    </div>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="https://jonataribeiro.dev" target="_blank" rel="noopener noreferrer">Vamos conversar?</a>
+      <button class="btn btn-ghost" type="button" id="shareBtn">Compartilhar cartão</button>
+    </div>
+
+    <p class="foot">
+      <a href="https://jonataribeiro.dev/cartao/cartao-jonataribeiro.png" download="cartao-jonata.png">Baixar imagem do cartão</a>
+      &nbsp;•&nbsp; © <span id="year"></span> Jônata Ribeiro
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const url = "https://jonataribeiro.dev/cartao";
+    document.getElementById("shareBtn").addEventListener("click", async () => {
+      const data = {
+        title: "Cartão de Visitas — Jônata Ribeiro",
+        text: "@jonataribeiro.dev • Backend • Database • Data • AI — meu cartão digital.",
+        url,
+      };
+      if (navigator.share) {
+        try { await navigator.share(data); return; } catch {}
+      }
+      try {
+        await navigator.clipboard.writeText(url);
+        const btn = document.getElementById("shareBtn");
+        btn.textContent = "Link copiado!";
+        setTimeout(() => (btn.textContent = "Compartilhar cartão"), 1800);
+      } catch {}
+    });
+  </script>
+</body>
+</html>
