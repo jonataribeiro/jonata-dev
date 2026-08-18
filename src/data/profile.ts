@@ -5,7 +5,7 @@ export type ContactChannel = {
   icon: 'github' | 'linkedin' | 'mail' | 'whatsapp'
 }
 
-export const curriculoUrl = `${import.meta.env.BASE_URL}curriculo.pdf`
+export const curriculoUrl = `${import.meta.env.BASE_URL}Curriculo_Jonata_Ribeiro.pdf`
 
 export const profile = {
   name: 'Jônata Ribeiro',
